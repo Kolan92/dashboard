@@ -17,13 +17,67 @@
     @include default-color()
 }
 
-.elem {
-    height: 20px;
-    width: 20px;
-    padding: 10px;
+.content {
+
+    display: flex;
+    padding: 50px;
+    justify-content: space-around;
+
+    .elem {
+        height: 100px;
+        width: 100px;
+
+        animation: rotation 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        transition: box-shadow 0.5s ease-in-out;
+        
+        &:hover {
+            box-shadow: 0 0 15px  rgba(255, 255, 255, 0.8)
+        }
+    }
+    
+    @for $i from 1 through 5 {
+        .elem-#{$i} {
+            background: rgba(red, 1-$i/10);    
+        }
+    }
 }
-@for $i from 1 through 5 {
-    .elem-#{$i} {
-        background: rgba(red, $i/10);    
+
+.make-it-fast::after {
+    box-shadow: 0 5px 15px rgba(9, 75, 3, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Transition to showing the bigger shadow on hover */
+  .make-it-fast:hover::after {
+    opacity: 1;
+  }
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px #ffffff
+    }
+    50% {
+        box-shadow: 15px #ffffff
+
+    }
+    100% {
+        box-shadow: 0px #ffffff
+
     }
 }
