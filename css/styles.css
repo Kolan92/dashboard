@@ -21,10 +21,13 @@ body {
   display: flex;
   padding: 50px;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .content .elem {
     height: 100px;
-    width: 100px;
+    min-width: 100px;
+    background: red;
     -webkit-animation: rotation 5s;
             animation: rotation 5s;
     -webkit-animation-timing-function: linear;
@@ -42,15 +45,15 @@ body {
       -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
               box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
   .content .elem-1 {
-    background: rgba(255, 0, 0, 0.9); }
+    opacity: 0.9; }
   .content .elem-2 {
-    background: rgba(255, 0, 0, 0.8); }
+    opacity: 0.8; }
   .content .elem-3 {
-    background: rgba(255, 0, 0, 0.7); }
+    opacity: 0.7; }
   .content .elem-4 {
-    background: rgba(255, 0, 0, 0.6); }
+    opacity: 0.6; }
   .content .elem-5 {
-    background: rgba(255, 0, 0, 0.5); }
+    opacity: 0.5; }
 
 .make-it-fast::after {
   -webkit-box-shadow: 0 5px 15px rgba(9, 75, 3, 0.3);
@@ -101,5 +104,9 @@ body {
   100% {
     -webkit-box-shadow: 0px #ffffff;
             box-shadow: 0px #ffffff; } }
+
+@media (max-width: 768px) {
+  .content .elem {
+    background-color: yellow; } }
 
 /*# sourceMappingURL=styles.css.map */

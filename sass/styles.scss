@@ -22,10 +22,12 @@
     display: flex;
     padding: 50px;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     .elem {
         height: 100px;
-        width: 100px;
+        min-width: 100px;
+        background: red;    
 
         animation: rotation 5s;
         animation-timing-function: linear;
@@ -41,7 +43,7 @@
     
     @for $i from 1 through 5 {
         .elem-#{$i} {
-            background: rgba(red, 1-$i/10);    
+            opacity:  1-$i/10
         }
     }
 }
@@ -79,5 +81,12 @@
     100% {
         box-shadow: 0px #ffffff
 
+    }
+}
+@media (max-width: 768px) {
+    .content {
+        .elem {
+            background-color: yellow;
+        }
     }
 }
