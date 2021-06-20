@@ -1,4 +1,24 @@
-body {
-    background-color: blue;
-    transition: all 2s;
+
+
+.content {
+
+    background-color: #ccc;
+    padding: 20px;
+
+    
+    h1 {
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+
+    h2 { font-size: 28px;}
+
+    a {
+        color: red;
+        &:hover{
+            color: green;
+        }
+    }
+
+
 }

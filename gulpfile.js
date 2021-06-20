@@ -6,7 +6,7 @@ const plumber = require('gulp-plumber');
 
 gulp.task('styles', async () => {
     gulp.src('./sass/styles.scss')
-        .pipe(plumber)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass.sync())
         .pipe(autoprefixer())

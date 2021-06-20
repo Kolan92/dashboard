@@ -1,7 +1,14 @@
-body {
-  background-color: blue;
-  -webkit-transition: all 2s;
-  -o-transition: all 2s;
-  transition: all 2s; }
+.content {
+  background-color: #ccc;
+  padding: 20px; }
+  .content h1 {
+    font-size: 36px;
+    text-transform: uppercase; }
+  .content h2 {
+    font-size: 28px; }
+  .content a {
+    color: red; }
+    .content a:hover {
+      color: green; }
 
 /*# sourceMappingURL=styles.css.map */
