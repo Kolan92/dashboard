@@ -1,3 +1,6 @@
+@import "variabels";
+@import "app";
+
 @mixin default-color() {
     font-size: 1.5rem;
     color: green;
