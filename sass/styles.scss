@@ -1,24 +1,26 @@
+@mixin default-color() {
+    font-size: 1.5rem;
+    color: green;
+    font-weight: bold;
 
+    &:hover { color: darkgreen;}
+}
 
-.content {
+.link {
+    @include default-color()
+}
 
-    background-color: #ccc;
-    padding: 20px;
+.btn {
+    @include default-color()
+}
 
-    
-    h1 {
-        font-size: 36px;
-        text-transform: uppercase;
+.elem {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+}
+@for $i from 1 through 5 {
+    .elem-#{$i} {
+        background: rgba(red, $i/10);    
     }
-
-    h2 { font-size: 28px;}
-
-    a {
-        color: red;
-        &:hover{
-            color: green;
-        }
-    }
-
-
 }
