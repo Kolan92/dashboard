@@ -40,58 +40,142 @@
 
             <div class="sidebar-user__name-wrapper">
               <a class="sidebar-user__name" href="#">Rita Cook</a>
-              <i class="sidebar-user__status sidebar-user__status--online">Online</i>
+              <i class="sidebar-user__status sidebar-user__status--online"
+                >Online</i
+              >
             </div>
           </div>
         </section>
 
         <section class="sidebar__section">
-          <h4>Navigation</h4>
-          <ul>
-            <li class="sidebar-nav">
-              <a href="#" class="sidebar-nav__item">
-                <i class="material-icons"> home </i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#"><span>Users</span></a>
-            </li>
-            <li>
-              <a href="#"><span>Favorite</span></a>
-            </li>
-            <li>
-              <a href="#"><span>Widgets</span></a>
-            </li>
-          </ul>
+          <div class="sidebar-nav">
+            <h4 class="sidebar-nav__header">Navigation</h4>
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--primary"
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> home </i>
+                  </div>
+                  <span class="sidebar-nav__title">Home</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--primary"
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> face </i>
+                  </div>
+                  <span class="sidebar-nav__title">Users</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--primary"
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> favorite </i>
+                  </div>
+                  <span class="sidebar-nav__title">Favorite</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--primary"
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> widgets </i>
+                  </div>
+                  <span class="sidebar-nav__title">Widgets</span>
+                  <span class="sidebar-nav__notification">New!</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sidebar__section">
+          <div class="sidebar-nav">
+            <h4 class="sidebar-nav__header">Community</h4>
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--secondary "
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon sidebar-nav__icon--alert"> notifications_active </i>
+                  </div>
+                  <span class="sidebar-nav__title">Notifications</span>
+                  <span class="sidebar-nav__notification">5</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--secondary"
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> mail </i>
+                  </div>
+                  <span class="sidebar-nav__title">Mail</span>
+
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--secondary"
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> thumb_up </i>
+                  </div>
+                  <span class="sidebar-nav__title">Social</span>
+                  <span class="sidebar-nav__notification">18</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="sidebar-nav__item sidebar-nav__item--secondary"
+                >
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> date_range </i>
+                  </div>
+                  <span class="sidebar-nav__title">Calendar</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="sidebar__section">
-          <h4>Community</h4>
-          <ul>
-            <li>
-              <a href="#"><span>Notifications</span></a>
-            </li>
-            <li>
-              <a href="#"><span>Mail</span></a>
-            </li>
-            <li>
-              <a href="#"><span>Social</span></a>
-            </li>
-            <li>
-              <a href="#"><span>Calendar</span></a>
-            </li>
-          </ul>
-        </section>
-        <section class="sidebar__section">
-          <h4>Settings</h4>
-          <ul>
-            <li>
-              <a href="#"><span>Profile</span></a>
-            </li>
-            <li>
-              <a href="#"><span>General</span></a>
-            </li>
-          </ul>
+          <div class="sidebar-nav">
+            <h4 class="sidebar-nav__header">Settings</h4>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav__item">
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> widgets </i>
+                  </div>
+                  <span class="sidebar-nav__title">Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav__item">
+                  <div class="sidebar-nav__icon-wrapper">
+                    <i class="material-icons sidebar-nav__icon"> widgets </i>
+                  </div>
+                  <span class="sidebar-nav__title">General</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
       </aside>
 
