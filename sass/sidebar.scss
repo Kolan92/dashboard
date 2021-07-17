@@ -1,11 +1,138 @@
+$avatar-size: 6rem;
+$sidebar-collapsed-toggler-height: 3rem;
+
 .sidebar {
-  width: 10vw;
+  width: $full-size-navbar-width;
   background: $gray-50;
+  transition: width $transition-duration-short;
+  position: relative;
 
   .sidebar__section {
     display: flex;
     justify-content: center;
     padding: 0.5rem 0;
+  }
+}
+
+//toggler
+.sidebar-toggler__checkbox {
+  display: none;
+  &:checked {
+    + .sidebar {
+      width: $collapsed-navbar-width;
+
+      .sidebar__section:nth-of-type(1) {
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .sidebar__section:nth-of-type(2) {
+        margin-top: $sidebar-collapsed-toggler-height;
+      }
+
+      .sidebar-toggler {
+        width: 100%;
+        height: $sidebar-collapsed-toggler-height;
+      }
+
+      .sidebar-toggler__icon {
+        &::before {
+          transform: rotate(30deg);
+        }
+        &::after {
+          transform: rotate(-30deg);
+        }
+      }
+
+      .sidebar-user__avatar-wrapper {
+        height: $avatar-size/2;
+        width: $avatar-size/2;
+      }
+
+      .sidebar-user__name,
+      .sidebar-user__status {
+        font-size: $font-size-xxs;
+      }
+
+      .sidebar-nav__header {
+        &::before {
+          content: attr(data-toggled-shortcut);
+          text-transform: uppercase;
+          margin-right: 2rem;
+        }
+      }
+
+      .sidebar-nav__item {
+        z-index: 2;
+        overflow: hidden;
+        width: $collapsed-navbar-width;
+
+        &:hover {
+          background: $gray-50;
+          width: $full-size-navbar-width;
+          box-shadow: $shadow-10;
+        }
+      }
+
+      .sidebar-nav__notification {
+        right: 0.25rem;
+        top: 0.25rem;
+        padding: 0.1rem 0.25rem;
+        font-size: 0.5rem;
+      }
+    }
+
+    ~ .app__page {
+      width: calc(100% - #{$collapsed-navbar-width});
+    }
+  }
+}
+
+.sidebar-toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover .sidebar-toggler__icon {
+    &::before,
+    &::after {
+      background-color: $primary;
+    }
+  }
+
+  @at-root .sidebar-toggler__icon {
+    width: 0.75rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0.75rem;
+      height: 0.15rem;
+      background: $gray-300;
+      transition-property: background, transform;
+      transition-duration: $transition-duration-long;
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(-30deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(30deg);
+    }
   }
 }
 
@@ -63,8 +190,10 @@
 .sidebar_user {
   @at-root .sidebar-user__avatar-wrapper {
     position: relative;
-    width: 6rem;
-    height: 6rem;
+    width: $avatar-size;
+    height: $avatar-size;
+    transition-property: width, height;
+    transition-duration: $transition-duration-short;
 
     &:hover {
       .sidebar-user__overlay {
@@ -120,7 +249,8 @@
   @at-root .sidebar-user__name {
     font-weight: $font-weight-bold;
     color: $dark-secondary;
-    transition: color $transition-duration-short;
+    transition: color $transition-duration-short,
+      font-size $transition-duration-short;
 
     &:hover,
     &:focus {
@@ -135,6 +265,7 @@
     justify-content: center;
     align-items: center;
     color: $dark-disabled;
+    transition: font-size $transition-duration-short;
     &::after {
       content: "";
       margin-left: 0.25rem;
@@ -156,15 +287,40 @@
 
 //nav
 
-
 @keyframes alert-shake {
-    5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {transform: translateX(-.15rem)}
-    10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {transform: translateX(.15rem)}
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    transform: translateX(-0.15rem);
+  }
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    transform: translateX(0.15rem);
+  }
 }
 
 @keyframes alert-pulse {
-    20% { box-shadow: 0 0 0 0 rgba($secondary, 0.7);}
-    80% { box-shadow: 0 0 0 .75rem rgba($secondary, 0);}
+  20% {
+    box-shadow: 0 0 0 0 rgba($secondary, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 0.75rem rgba($secondary, 0);
+  }
 }
 
 .sidebar-nav {
@@ -232,8 +388,8 @@
       }
 
       .sidebar-nav__notification {
-          background: $gradient-secondary;
-          box-shadow: $shadow-secondary;
+        background: $gradient-secondary;
+        box-shadow: $shadow-secondary;
       }
 
       &:is(:hover, :focus) {
@@ -276,7 +432,6 @@
     border-radius: 50%;
     color: $secondary;
   }
-
 
   @at-root .sidebar-nav__title {
     transition: color $transition-duration-short;

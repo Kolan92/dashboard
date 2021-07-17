@@ -7,6 +7,7 @@ $dark-disabled: rgba(#000, .38);
 
 $light: #ffffff;
 $gray-50: #fafafa;
+$gray-300: #e0e0e0;
 
 $shadow-10: 0 .25rem 1rem rgba(0,0,0,0.15);
 $shadow-20: 0 .75rem 1.25rem rgba(0,0,0,0.2);
@@ -31,6 +32,10 @@ $transition-duration-long: .35s;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
+$full-size-navbar-width: 10rem;
+$collapsed-navbar-width: 3.5rem;
+
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -44,7 +49,7 @@ body {
     @at-root .app__page {
         background: $gray-50;
         box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-        width: 90vw;
+        width: calc(100% - #{$full-size-navbar-width});
         z-index: 1;
     }
 }

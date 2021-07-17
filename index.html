@@ -16,7 +16,16 @@
 
   <body>
     <div class="app">
+      <input
+        class="sidebar-toggler__checkbox"
+        type="checkbox"
+        id="sidebar-toggler"
+      />
       <aside class="sidebar">
+        <label for="sidebar-toggler" class="sidebar-toggler">
+          <i class="sidebar-toggler__icon"></i>
+        </label>
+
         <section class="sidebar__section">
           <div class="sidebar-logo">
             <a href="#" class="sidebar-logo__wrapper">
@@ -49,7 +58,9 @@
 
         <section class="sidebar__section">
           <div class="sidebar-nav">
-            <h4 class="sidebar-nav__header">Navigation</h4>
+            <h4 class="sidebar-nav__header" data-toggled-shortcut="Nav">
+              Navigation
+            </h4>
             <ul>
               <li>
                 <a
@@ -102,15 +113,24 @@
 
         <section class="sidebar__section">
           <div class="sidebar-nav">
-            <h4 class="sidebar-nav__header">Community</h4>
+            <h4 class="sidebar-nav__header" data-toggled-shortcut="COM">
+              Community
+            </h4>
             <ul>
               <li>
                 <a
                   href="#"
-                  class="sidebar-nav__item sidebar-nav__item--secondary "
+                  class="sidebar-nav__item sidebar-nav__item--secondary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon sidebar-nav__icon--alert"> notifications_active </i>
+                    <i
+                      class="
+                        material-icons
+                        sidebar-nav__icon sidebar-nav__icon--alert
+                      "
+                    >
+                      notifications_active
+                    </i>
                   </div>
                   <span class="sidebar-nav__title">Notifications</span>
                   <span class="sidebar-nav__notification">5</span>
@@ -125,7 +145,6 @@
                     <i class="material-icons sidebar-nav__icon"> mail </i>
                   </div>
                   <span class="sidebar-nav__title">Mail</span>
-
                 </a>
               </li>
               <li>
@@ -156,7 +175,9 @@
         </section>
         <section class="sidebar__section">
           <div class="sidebar-nav">
-            <h4 class="sidebar-nav__header">Settings</h4>
+            <h4 class="sidebar-nav__header" data-toggled-shortcut="Set">
+              Settings
+            </h4>
             <ul>
               <li>
                 <a href="#" class="sidebar-nav__item">
