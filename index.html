@@ -15,10 +15,11 @@
   </head>
 
   <body>
+    <input type="text" class="navbar-search__input" id="search-input" placeholder="I'm looking for">
     <div class="app">
       <input
         class="sidebar-toggler__checkbox"
-        type="checkbox"
+        type="checkbox" 
         id="sidebar-toggler"
       />
       <aside class="sidebar">
@@ -201,7 +202,34 @@
       </aside>
 
       <main class="app__page">
-        <nav>Navbar</nav>
+        <nav class="navbar">
+          <div class="navbar-search">
+            <label class="navbar-search__label-icon" for="search-input">
+              <i class="material-icons navbar-search__icon">search</i>
+              <span class="navbar-search__text">Search</span>
+            </label>
+          </div>
+
+          <div class="navbar-links">
+            <div class="navbar__section">
+                <div>
+                    <a href="#"><span>Polski</span></a>
+                </div>
+            </div>
+            <div class="navbar__section">
+                <div>
+                    <a href="#">Rita Cook</a>
+                </div>
+            </div>
+            <div class="navbar__section">
+                <div>
+                    <a href="#">Sign out</a>
+                </div>
+            </div>
+        </div>
+
+
+        </nav>
 
         <div class="dashboard">dashboard</div>
 

@@ -35,7 +35,9 @@ $font-weight-bold: 700;
 $full-size-navbar-width: 10rem;
 $collapsed-navbar-width: 3.5rem;
 
-
+html {
+    overflow-x: hidden;
+}
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -45,6 +47,8 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+
+    transition: transform $transition-duration-short;
    
     @at-root .app__page {
         background: $gray-50;
