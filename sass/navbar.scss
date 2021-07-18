@@ -48,7 +48,7 @@
       padding: 1.5rem;
       cursor: pointer;
       overflow: hidden;
-      margin: -.5rem;
+      margin: -0.5rem;
 
       &:hover {
         .navbar-search__icon {
@@ -93,15 +93,133 @@
   }
 
   @at-root .navbar-links {
-      display: flex;
-      flex-direction: row;
-      height: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 
-      @at-root .navbar__section {
-          display: flex;
-          align-items: center;
-          margin-left: 1rem;
-          height: 100%;
+    @at-root .navbar__section {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+      height: 100%;
+    }
+  }
+}
+
+.navbar-lang-switcher {
+  position: relative;
+  height: 100%;
+  @at-root .navbar-lang-switcher__flag-list {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba($light, 0.9);
+    box-shadow: $shadow-20;
+  }
+
+  @at-root .navbar-lang-switcher__flag--wrapper {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1rem;
+
+    &.navbar-lang-switcher__flag--wrapper--active {
+      &::after {
+        content: "keyboard_arrow_down";
+        font-family: "Material Icons";
+        color: $dark-secondary;
       }
+    }
+
+    @at-root .navbar-lang-switcher__flag {
+      height: 1.75rem;
+      width: 1.75rem;
+      border-radius: 50%;
+      box-shadow: $shadow-20;
+      position: relative;
+      overflow: hidden;
+      &.navbar-lang-switcher__flag--poland {
+        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%);
+      }
+
+      &.navbar-lang-switcher__flag--italy {
+        background: linear-gradient(
+          to right,
+          #008c45 33.3%,
+          #f4f5f0 33.3%,
+          #f4f5f0 66.7%,
+          #cd212a 66.7%
+        );
+      }
+
+      &.navbar-lang-switcher__flag--greece {
+        $greek-blue: #0d5eaf;
+        $greek-white: #ffffff;
+        background: linear-gradient(
+          to bottom,
+          $greek-blue 11.1%,
+          $greek-white 11.1%,
+          $greek-white 22.2%,
+          $greek-blue 22.2%,
+          $greek-blue 33.3%,
+          $greek-white 33.3%,
+          $greek-white 44.4%,
+          $greek-blue 44.4%,
+          $greek-blue 55.5%,
+          $greek-white 55.5%,
+          $greek-white 66.6%,
+          $greek-blue 66.6%,
+          $greek-blue 77.7%,
+          $greek-white 77.7%,
+          $greek-white 88.8%,
+          $greek-blue 88.8%
+        );
+
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: $greek-blue;
+          height: 56%;
+          width: 56%;
+          top: 0;
+          left: 0;
+
+          background: linear-gradient(
+              to bottom,
+              transparent 40%,
+              $greek-white 40%,
+              $greek-white 60%,
+              transparent 60%
+            ),
+            linear-gradient(
+              to right,
+              $greek-blue 40%,
+              $greek-white 40%,
+              $greek-white 60%,
+              $greek-blue 60%
+            );
+        }
+      }
+
+      &.navbar-lang-switcher__flag--czechia {
+        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%);
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: #11457e;
+          height: 1.75rem;
+          width: 1.75rem;
+          transform: rotate(45deg);
+          rotate: 45dag;
+          left: -66.6%;
+          overflow: hidden;
+        }
+      }
+    }
+
+    @at-root .navbar-lang-switcher__country-name {
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
   }
 }

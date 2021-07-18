@@ -2,32 +2,42 @@ $primary: #3849aa;
 $secondary: #d69d22;
 $success: #32cb00;
 
-$dark-secondary: rgba(#000, .54);
-$dark-disabled: rgba(#000, .38);
+$dark-secondary: rgba(#000, 0.54);
+$dark-disabled: rgba(#000, 0.38);
 
 $light: #ffffff;
 $gray-50: #fafafa;
 $gray-300: #e0e0e0;
 
-$shadow-10: 0 .25rem 1rem rgba(0,0,0,0.15);
-$shadow-20: 0 .75rem 1.25rem rgba(0,0,0,0.2);
+$shadow-10: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+$shadow-20: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
 
-$shadow-primary: 0 .75rem 1.25rem rgba($primary, 0.2);
-$shadow-secondary: 0 .75rem 1.25rem rgba($secondary, 0.2);
+$shadow-primary: 0 0.75rem 1.25rem rgba($primary, 0.2);
+$shadow-secondary: 0 0.75rem 1.25rem rgba($secondary, 0.2);
 
-$gradient-primary: linear-gradient(45deg, $primary 0, lighten($primary, 17%) 50%, $primary 100%);
-$gradient-secondary: linear-gradient(45deg, $secondary 0, lighten($secondary, 15%) 75%, $secondary 100%);
+$gradient-primary: linear-gradient(
+  45deg,
+  $primary 0,
+  lighten($primary, 17%) 50%,
+  $primary 100%
+);
+$gradient-secondary: linear-gradient(
+  45deg,
+  $secondary 0,
+  lighten($secondary, 15%) 75%,
+  $secondary 100%
+);
 
-$font-size-xxs: .625rem;
-$font-size-xs: .75rem;
-$font-size-sm: .9rem;
+$font-size-xxs: 0.625rem;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.9rem;
 $font-size-md: 1rem;
 $font-size-lg: 1.25rem;
 $font-size-xl: 1.5rem;
 $font-size-xxl: 2rem;
 
-$transition-duration-short: .2s;
-$transition-duration-long: .35s;
+$transition-duration-short: 0.2s;
+$transition-duration-long: 0.35s;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
@@ -36,24 +46,32 @@ $full-size-navbar-width: 10rem;
 $collapsed-navbar-width: 3.5rem;
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
+
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+span,
+p {
+  color: $dark-secondary;
+  font-size: $font-size-sm;
+  line-height: 1.25;
 }
 
 .app {
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
 
-    transition: transform $transition-duration-short;
-   
-    @at-root .app__page {
-        background: $gray-50;
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-        width: calc(100% - #{$full-size-navbar-width});
-        z-index: 1;
-    }
+  transition: transform $transition-duration-short;
+
+  @at-root .app__page {
+    background: $gray-50;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    width: calc(100% - #{$full-size-navbar-width});
+    z-index: 1;
+  }
 }

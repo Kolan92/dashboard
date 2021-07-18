@@ -15,11 +15,16 @@
   </head>
 
   <body>
-    <input type="text" class="navbar-search__input" id="search-input" placeholder="I'm looking for">
+    <input
+      type="text"
+      class="navbar-search__input"
+      id="search-input"
+      placeholder="I'm looking for"
+    />
     <div class="app">
       <input
         class="sidebar-toggler__checkbox"
-        type="checkbox" 
+        type="checkbox"
         id="sidebar-toggler"
       />
       <aside class="sidebar">
@@ -50,9 +55,9 @@
 
             <div class="sidebar-user__name-wrapper">
               <a class="sidebar-user__name" href="#">Rita Cook</a>
-              <i class="sidebar-user__status sidebar-user__status--online"
-                >Online</i
-              >
+              <i class="sidebar-user__status sidebar-user__status--online"></i>
+                Online
+              </i>
             </div>
           </div>
         </section>
@@ -69,7 +74,7 @@
                   class="sidebar-nav__item sidebar-nav__item--primary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> home </i>
+                    <i class="material-icons sidebar-nav__icon">home</i>
                   </div>
                   <span class="sidebar-nav__title">Home</span>
                 </a>
@@ -80,7 +85,7 @@
                   class="sidebar-nav__item sidebar-nav__item--primary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> face </i>
+                    <i class="material-icons sidebar-nav__icon">face</i>
                   </div>
                   <span class="sidebar-nav__title">Users</span>
                 </a>
@@ -91,7 +96,7 @@
                   class="sidebar-nav__item sidebar-nav__item--primary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> favorite </i>
+                    <i class="material-icons sidebar-nav__icon">favorite</i>
                   </div>
                   <span class="sidebar-nav__title">Favorite</span>
                 </a>
@@ -102,7 +107,7 @@
                   class="sidebar-nav__item sidebar-nav__item--primary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> widgets </i>
+                    <i class="material-icons sidebar-nav__icon">widgets</i>
                   </div>
                   <span class="sidebar-nav__title">Widgets</span>
                   <span class="sidebar-nav__notification">New!</span>
@@ -143,7 +148,7 @@
                   class="sidebar-nav__item sidebar-nav__item--secondary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> mail </i>
+                    <i class="material-icons sidebar-nav__icon">mail</i>
                   </div>
                   <span class="sidebar-nav__title">Mail</span>
                 </a>
@@ -154,7 +159,7 @@
                   class="sidebar-nav__item sidebar-nav__item--secondary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> thumb_up </i>
+                    <i class="material-icons sidebar-nav__icon">thumb_up</i>
                   </div>
                   <span class="sidebar-nav__title">Social</span>
                   <span class="sidebar-nav__notification">18</span>
@@ -166,7 +171,7 @@
                   class="sidebar-nav__item sidebar-nav__item--secondary"
                 >
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> date_range </i>
+                    <i class="material-icons sidebar-nav__icon">date_range</i>
                   </div>
                   <span class="sidebar-nav__title">Calendar</span>
                 </a>
@@ -183,7 +188,7 @@
               <li>
                 <a href="#" class="sidebar-nav__item">
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> widgets </i>
+                    <i class="material-icons sidebar-nav__icon">widgets</i>
                   </div>
                   <span class="sidebar-nav__title">Profile</span>
                 </a>
@@ -191,7 +196,7 @@
               <li>
                 <a href="#" class="sidebar-nav__item">
                   <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon"> widgets </i>
+                    <i class="material-icons sidebar-nav__icon">widgets</i>
                   </div>
                   <span class="sidebar-nav__title">General</span>
                 </a>
@@ -212,23 +217,82 @@
 
           <div class="navbar-links">
             <div class="navbar__section">
-                <div>
-                    <a href="#"><span>Polski</span></a>
-                </div>
+              <div class="navbar-lang-switcher">
+                <a href="#" class="navbar-lang-switcher__flag--wrapper navbar-lang-switcher__flag--wrapper--active">
+                  <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--poland"></i>
+                  <span class="navbar=lang-switcher__country-name">Polski</span>
+                </a>
+                <ul class="navbar-lang-switcher__flag-list">
+                  <li>
+                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--italy"></i>
+                      <span class="navbar=lang-switcher__country-name">
+                        Italiano
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--greece"></i>
+                      <span class="navbar-lang-switcher__country-name">
+                        Greece
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--czechia"></i>
+                      <span class="navbar-lang-switcher__country-name">
+                        Czech Republic
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                      <i class="navbar-lang-switcher__flag"></i>
+                      <span class="navbar-lang-switcher__country-name">
+                        Seychelles
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                      <i class="navbar-lang-switcher__flag"></i>
+                      <span class="navbar-lang-switcher__country-name">
+                        Grenadines
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                      <i class="navbar-lang-switcher__flag"></i>
+                      <span class="navbar-lang-switcher__country-name">
+                        Maldives
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                      <i class="navbar-lang-switcher__flag"></i>
+                      <span class="navbar-lang-switcher__country-name">
+                        United States
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="navbar__section">
-                <div>
-                    <a href="#">Rita Cook</a>
-                </div>
+              <div>
+                <a href="#">Rita Cook</a>
+              </div>
             </div>
             <div class="navbar__section">
-                <div>
-                    <a href="#">Sign out</a>
-                </div>
+              <div>
+                <a href="#">Sign out</a>
+              </div>
             </div>
-        </div>
-
-
+          </div>
         </nav>
 
         <div class="dashboard">dashboard</div>

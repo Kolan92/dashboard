@@ -40,8 +40,14 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400; }
+
+span,
+p {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.9rem;
+  line-height: 1.25; }
 
 .app {
   display: -webkit-box;
@@ -566,7 +572,7 @@ body {
       padding: 1.5rem;
       cursor: pointer;
       overflow: hidden;
-      margin: -.5rem; }
+      margin: -0.5rem; }
       .navbar-search__label-icon:hover .navbar-search__icon {
         color: #3849aa;
         text-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
@@ -626,5 +632,79 @@ body {
               align-items: center;
       margin-left: 1rem;
       height: 100%; }
+
+.navbar-lang-switcher {
+  position: relative;
+  height: 100%; }
+  .navbar-lang-switcher__flag-list {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2); }
+  .navbar-lang-switcher__flag--wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 3rem;
+    padding: 0 1rem; }
+    .navbar-lang-switcher__flag--wrapper.navbar-lang-switcher__flag--wrapper--active::after {
+      content: "keyboard_arrow_down";
+      font-family: "Material Icons";
+      color: rgba(0, 0, 0, 0.54); }
+    .navbar-lang-switcher__flag {
+      height: 1.75rem;
+      width: 1.75rem;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+              box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden; }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--poland {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #cd212a));
+        background: -o-linear-gradient(top, #fff 50%, #cd212a 50%);
+        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%); }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--italy {
+        background: -webkit-gradient(linear, left top, right top, color-stop(33.3%, #008c45), color-stop(33.3%, #f4f5f0), color-stop(66.7%, #f4f5f0), color-stop(66.7%, #cd212a));
+        background: -o-linear-gradient(left, #008c45 33.3%, #f4f5f0 33.3%, #f4f5f0 66.7%, #cd212a 66.7%);
+        background: linear-gradient(to right, #008c45 33.3%, #f4f5f0 33.3%, #f4f5f0 66.7%, #cd212a 66.7%); }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--greece {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(11.1%, #0d5eaf), color-stop(11.1%, #ffffff), color-stop(22.2%, #ffffff), color-stop(22.2%, #0d5eaf), color-stop(33.3%, #0d5eaf), color-stop(33.3%, #ffffff), color-stop(44.4%, #ffffff), color-stop(44.4%, #0d5eaf), color-stop(55.5%, #0d5eaf), color-stop(55.5%, #ffffff), color-stop(66.6%, #ffffff), color-stop(66.6%, #0d5eaf), color-stop(77.7%, #0d5eaf), color-stop(77.7%, #ffffff), color-stop(88.8%, #ffffff), color-stop(88.8%, #0d5eaf));
+        background: -o-linear-gradient(top, #0d5eaf 11.1%, #ffffff 11.1%, #ffffff 22.2%, #0d5eaf 22.2%, #0d5eaf 33.3%, #ffffff 33.3%, #ffffff 44.4%, #0d5eaf 44.4%, #0d5eaf 55.5%, #ffffff 55.5%, #ffffff 66.6%, #0d5eaf 66.6%, #0d5eaf 77.7%, #ffffff 77.7%, #ffffff 88.8%, #0d5eaf 88.8%);
+        background: linear-gradient(to bottom, #0d5eaf 11.1%, #ffffff 11.1%, #ffffff 22.2%, #0d5eaf 22.2%, #0d5eaf 33.3%, #ffffff 33.3%, #ffffff 44.4%, #0d5eaf 44.4%, #0d5eaf 55.5%, #ffffff 55.5%, #ffffff 66.6%, #0d5eaf 66.6%, #0d5eaf 77.7%, #ffffff 77.7%, #ffffff 88.8%, #0d5eaf 88.8%); }
+        .navbar-lang-switcher__flag.navbar-lang-switcher__flag--greece::after {
+          position: absolute;
+          content: "";
+          background-color: #0d5eaf;
+          height: 56%;
+          width: 56%;
+          top: 0;
+          left: 0;
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, #ffffff), color-stop(60%, #ffffff), color-stop(60%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(40%, #0d5eaf), color-stop(40%, #ffffff), color-stop(60%, #ffffff), color-stop(60%, #0d5eaf));
+          background: -o-linear-gradient(top, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%), -o-linear-gradient(left, #0d5eaf 40%, #ffffff 40%, #ffffff 60%, #0d5eaf 60%);
+          background: linear-gradient(to bottom, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%), linear-gradient(to right, #0d5eaf 40%, #ffffff 40%, #ffffff 60%, #0d5eaf 60%); }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--czechia {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #cd212a));
+        background: -o-linear-gradient(top, #fff 50%, #cd212a 50%);
+        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%); }
+        .navbar-lang-switcher__flag.navbar-lang-switcher__flag--czechia::after {
+          position: absolute;
+          content: "";
+          background-color: #11457e;
+          height: 1.75rem;
+          width: 1.75rem;
+          -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          rotate: 45dag;
+          left: -66.6%;
+          overflow: hidden; }
+    .navbar-lang-switcher__country-name {
+      white-space: nowrap;
+      margin-left: 0.5rem; }
 
 /*# sourceMappingURL=styles.css.map */
