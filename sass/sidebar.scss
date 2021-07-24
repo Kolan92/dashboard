@@ -4,7 +4,7 @@ $sidebar-collapsed-toggler-height: 3rem;
 .sidebar {
   width: $full-size-navbar-width;
   background: $gray-50;
-  transition: width $transition-duration-short;
+  @include cubic-bezier-transition(width);
   position: relative;
 
   .sidebar__section {
@@ -120,8 +120,11 @@ $sidebar-collapsed-toggler-height: 3rem;
       width: 0.75rem;
       height: 0.15rem;
       background: $gray-300;
-      transition-property: background, transform;
-      transition-duration: $transition-duration-long;
+      @include cubic-bezier-transition-with-duration(
+        $transition-duration-long,
+        background,
+        transform
+      );
     }
 
     &::before {
@@ -192,8 +195,7 @@ $sidebar-collapsed-toggler-height: 3rem;
     position: relative;
     width: $avatar-size;
     height: $avatar-size;
-    transition-property: width, height;
-    transition-duration: $transition-duration-short;
+    @include cubic-bezier-transition(width, height);
 
     &:hover {
       .sidebar-user__overlay {
@@ -226,7 +228,7 @@ $sidebar-collapsed-toggler-height: 3rem;
       border-radius: 50%;
       overflow: hidden;
       opacity: 0;
-      transition: opacity $transition-duration-short;
+      @include cubic-bezier-transition(opacity);
     }
 
     @at-root .sidebar-user__icon {
@@ -234,8 +236,7 @@ $sidebar-collapsed-toggler-height: 3rem;
       font-size: $font-size-xxl;
       transform: scale(5);
       opacity: 0;
-      transition: transform $transition-duration-short,
-        opacity $transition-duration-short;
+      @include cubic-bezier-transition(transform, opacity);
     }
   }
 
@@ -249,8 +250,7 @@ $sidebar-collapsed-toggler-height: 3rem;
   @at-root .sidebar-user__name {
     font-weight: $font-weight-bold;
     color: $dark-secondary;
-    transition: color $transition-duration-short,
-      font-size $transition-duration-short;
+    @include cubic-bezier-transition(color, font-size);
 
     &:hover,
     &:focus {
@@ -265,7 +265,7 @@ $sidebar-collapsed-toggler-height: 3rem;
     justify-content: center;
     align-items: center;
     color: $dark-disabled;
-    transition: font-size $transition-duration-short;
+    @include cubic-bezier-transition(font-size);
     &::after {
       content: "";
       margin-left: 0.25rem;
@@ -396,8 +396,7 @@ $sidebar-collapsed-toggler-height: 3rem;
         ::after {
           opacity: 1;
           transform: translateX(0);
-          transition: opacity $transition-duration-short,
-            transform $transition-duration-short;
+          @include cubic-bezier-transition(opacity, transform);
         }
 
         .sidebar-nav__title {
@@ -408,8 +407,7 @@ $sidebar-collapsed-toggler-height: 3rem;
           color: $secondary;
           opacity: 0;
           transform: translateX(-100%);
-          transition: opacity $transition-duration-short,
-            transform $transition-duration-short;
+          @include cubic-bezier-transition(opacity, transform);
         }
       }
     }
@@ -424,7 +422,7 @@ $sidebar-collapsed-toggler-height: 3rem;
   @at-root .sidebar-nav__icon {
     font-size: $font-size-xl;
     color: $dark-secondary;
-    transition: color $transition-duration-short;
+    @include cubic-bezier-transition(color);
   }
 
   @at-root .sidebar-nav__icon--alert {
@@ -434,7 +432,7 @@ $sidebar-collapsed-toggler-height: 3rem;
   }
 
   @at-root .sidebar-nav__title {
-    transition: color $transition-duration-short;
+    @include cubic-bezier-transition(color);
   }
 
   @at-root .sidebar-nav__notification {

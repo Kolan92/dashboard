@@ -61,12 +61,25 @@ p {
   line-height: 1.25;
 }
 
+@mixin cubic-bezier-transition($properties...) {
+  @include cubic-bezier-transition-with-duration(
+    $transition-duration-short,
+    $properties
+  );
+}
+
+@mixin cubic-bezier-transition-with-duration($duration, $properties...) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+}
+
 .app {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
 
-  transition: transform $transition-duration-short;
+  @include cubic-bezier-transition(transform);
 
   @at-root .app__page {
     background: $gray-50;

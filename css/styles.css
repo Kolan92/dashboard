@@ -58,11 +58,17 @@ p {
       -ms-flex-direction: row;
           flex-direction: row;
   min-height: 100vh;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  -o-transition: transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; }
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+       -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+          transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .app__page {
     background: #fafafa;
     -webkit-box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
@@ -73,9 +79,15 @@ p {
 .sidebar {
   width: 10rem;
   background: #fafafa;
-  -webkit-transition: width 0.2s;
-  -o-transition: width 0.2s;
-  transition: width 0.2s;
+  -webkit-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+       -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+          transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
   position: relative; }
   .sidebar .sidebar__section {
     display: -webkit-box;
@@ -166,7 +178,10 @@ p {
       transition-property: background, transform, -webkit-transform;
       -webkit-transition-duration: 0.35s;
            -o-transition-duration: 0.35s;
-              transition-duration: 0.35s; }
+              transition-duration: 0.35s;
+      -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+           -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+              transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
     .sidebar-toggler__icon::before {
       top: 0;
       -webkit-transform: rotate(-30deg);
@@ -226,7 +241,10 @@ p {
   transition-property: width, height;
   -webkit-transition-duration: 0.2s;
        -o-transition-duration: 0.2s;
-          transition-duration: 0.2s; }
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+       -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+          transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .sidebar-user__avatar-wrapper:hover .sidebar-user__overlay {
     opacity: 1; }
   .sidebar-user__avatar-wrapper:hover .sidebar-user__icon {
@@ -258,9 +276,15 @@ p {
     border-radius: 50%;
     overflow: hidden;
     opacity: 0;
-    -webkit-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    transition: opacity 0.2s; }
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+         -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+            transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .sidebar-user__icon {
     color: #ffffff;
     font-size: 2rem;
@@ -268,11 +292,17 @@ p {
         -ms-transform: scale(5);
             transform: scale(5);
     opacity: 0;
-    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-    transition: opacity 0.2s, -webkit-transform 0.2s;
-    -o-transition: transform 0.2s, opacity 0.2s;
-    transition: transform 0.2s, opacity 0.2s;
-    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s; }
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+         -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+            transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
 
 .sidebar-user__name-wrapper {
   display: -webkit-box;
@@ -290,9 +320,15 @@ p {
 .sidebar-user__name {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.54);
-  -webkit-transition: color 0.2s, font-size 0.2s;
-  -o-transition: color 0.2s, font-size 0.2s;
-  transition: color 0.2s, font-size 0.2s; }
+  -webkit-transition-property: color, font-size;
+  -o-transition-property: color, font-size;
+  transition-property: color, font-size;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+       -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+          transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .sidebar-user__name:hover, .sidebar-user__name:focus {
     color: #3849aa; }
 
@@ -312,9 +348,15 @@ p {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(0, 0, 0, 0.38);
-  -webkit-transition: font-size 0.2s;
-  -o-transition: font-size 0.2s;
-  transition: font-size 0.2s; }
+  -webkit-transition-property: font-size;
+  -o-transition-property: font-size;
+  transition-property: font-size;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+       -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+          transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .sidebar-user__status::after {
     content: "";
     margin-left: 0.25rem;
@@ -466,11 +508,17 @@ p {
       -webkit-transform: translateX(0);
           -ms-transform: translateX(0);
               transform: translateX(0);
-      -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-      transition: opacity 0.2s, -webkit-transform 0.2s;
-      -o-transition: opacity 0.2s, transform 0.2s;
-      transition: opacity 0.2s, transform 0.2s;
-      transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s; }
+      -webkit-transition-property: opacity, -webkit-transform;
+      transition-property: opacity, -webkit-transform;
+      -o-transition-property: opacity, transform;
+      transition-property: opacity, transform;
+      transition-property: opacity, transform, -webkit-transform;
+      -webkit-transition-duration: 0.2s;
+           -o-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+      -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+           -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+              transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
     .sidebar-nav__item.sidebar-nav__item--secondary:is(:hover, :focus) .sidebar-nav__title {
       color: #d69d22; }
     .sidebar-nav__item.sidebar-nav__item--secondary:is(:hover, :focus) .sidebar-nav__icon {
@@ -479,11 +527,17 @@ p {
       -webkit-transform: translateX(-100%);
           -ms-transform: translateX(-100%);
               transform: translateX(-100%);
-      -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-      transition: opacity 0.2s, -webkit-transform 0.2s;
-      -o-transition: opacity 0.2s, transform 0.2s;
-      transition: opacity 0.2s, transform 0.2s;
-      transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s; }
+      -webkit-transition-property: opacity, -webkit-transform;
+      transition-property: opacity, -webkit-transform;
+      -o-transition-property: opacity, transform;
+      transition-property: opacity, transform;
+      transition-property: opacity, transform, -webkit-transform;
+      -webkit-transition-duration: 0.2s;
+           -o-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+      -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+           -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+              transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .sidebar-nav__icon-wrapper {
     position: relative;
     margin-right: 1rem;
@@ -491,18 +545,30 @@ p {
   .sidebar-nav__icon {
     font-size: 1.5rem;
     color: rgba(0, 0, 0, 0.54);
-    -webkit-transition: color 0.2s;
-    -o-transition: color 0.2s;
-    transition: color 0.2s; }
+    -webkit-transition-property: color;
+    -o-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+         -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+            transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .sidebar-nav__icon--alert {
     -webkit-animation: alert-shake 2s infinite, alert-pulse 2s infinite;
             animation: alert-shake 2s infinite, alert-pulse 2s infinite;
     border-radius: 50%;
     color: #d69d22; }
   .sidebar-nav__title {
-    -webkit-transition: color 0.2s;
-    -o-transition: color 0.2s;
-    transition: color 0.2s; }
+    -webkit-transition-property: color;
+    -o-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+         -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+            transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .sidebar-nav__notification {
     position: absolute;
     right: 1rem;
@@ -541,7 +607,10 @@ p {
     transition-property: width, top;
     -webkit-transition-duration: 0.2s;
          -o-transition-duration: 0.2s;
-            transition-duration: 0.2s; }
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+         -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+            transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
     .navbar-search__input:focus + .app {
       -webkit-transform: perspective(70rem) rotateX(30deg);
               transform: perspective(70rem) rotateX(30deg); }
@@ -597,7 +666,10 @@ p {
       transition-property: color, text-shadow, font-size;
       -webkit-transition-duration: 0.2s;
            -o-transition-duration: 0.2s;
-              transition-duration: 0.2s; }
+              transition-duration: 0.2s;
+      -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+           -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+              transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
     .navbar-search__text {
       color: rgba(0, 0, 0, 0.54);
       line-height: 1.25;
@@ -613,7 +685,10 @@ p {
       transition-property: color, text-shadow, left, opacity;
       -webkit-transition-duration: 0.2s;
            -o-transition-duration: 0.2s;
-              transition-duration: 0.2s; }
+              transition-duration: 0.2s;
+      -webkit-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+           -o-transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
+              transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56); }
   .navbar-links {
     display: -webkit-box;
     display: -ms-flexbox;

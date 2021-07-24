@@ -17,8 +17,7 @@
     top: 5rem;
     width: calc(100% - 26rem);
     outline: none;
-    transition-property: width, top;
-    transition-duration: $transition-duration-short;
+    @include cubic-bezier-transition(width, top);
 
     & + .app {
       transform: perspective(70rem) rotateX(30deg);
@@ -74,8 +73,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      transition-property: color, text-shadow, font-size;
-      transition-duration: $transition-duration-short;
+      @include cubic-bezier-transition(color, text-shadow, font-size);
     }
 
     @at-root .navbar-search__text {
@@ -87,8 +85,7 @@
       transform: translateY(-50%);
       opacity: 0;
 
-      transition-property: color, text-shadow, left, opacity;
-      transition-duration: $transition-duration-short;
+      @include cubic-bezier-transition(color, text-shadow, left, opacity);
     }
   }
 
