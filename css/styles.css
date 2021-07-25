@@ -740,9 +740,9 @@ p {
       position: relative;
       overflow: hidden; }
       .navbar-lang-switcher__flag.navbar-lang-switcher__flag--poland {
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #cd212a));
-        background: -o-linear-gradient(top, #fff 50%, #cd212a 50%);
-        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%); }
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #cd212a));
+        background: -o-linear-gradient(top, #ffffff 50%, #cd212a 50%);
+        background: linear-gradient(to bottom, #ffffff 50%, #cd212a 50%); }
       .navbar-lang-switcher__flag.navbar-lang-switcher__flag--italy {
         background: -webkit-gradient(linear, left top, right top, color-stop(33.3%, #008c45), color-stop(33.3%, #f4f5f0), color-stop(66.7%, #f4f5f0), color-stop(66.7%, #cd212a));
         background: -o-linear-gradient(left, #008c45 33.3%, #f4f5f0 33.3%, #f4f5f0 66.7%, #cd212a 66.7%);
@@ -763,9 +763,9 @@ p {
           background: -o-linear-gradient(top, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%), -o-linear-gradient(left, #0d5eaf 40%, #ffffff 40%, #ffffff 60%, #0d5eaf 60%);
           background: linear-gradient(to bottom, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%), linear-gradient(to right, #0d5eaf 40%, #ffffff 40%, #ffffff 60%, #0d5eaf 60%); }
       .navbar-lang-switcher__flag.navbar-lang-switcher__flag--czechia {
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #cd212a));
-        background: -o-linear-gradient(top, #fff 50%, #cd212a 50%);
-        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%); }
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #cd212a));
+        background: -o-linear-gradient(top, #ffffff 50%, #cd212a 50%);
+        background: linear-gradient(to bottom, #ffffff 50%, #cd212a 50%); }
         .navbar-lang-switcher__flag.navbar-lang-switcher__flag--czechia::after {
           position: absolute;
           content: "";
@@ -778,6 +778,51 @@ p {
           rotate: 45dag;
           left: -66.6%;
           overflow: hidden; }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--seychelles {
+        background: -o-linear-gradient(335deg, #002f6c 0, #002f6c 28%, transparent 20%), -o-linear-gradient(320deg, #fed141 0, #fed141 43%, transparent 45%), -o-linear-gradient(305deg, #d22630 0, #d22630 58%, transparent 60%), -o-linear-gradient(290deg, #ffffff 0, #ffffff 73%, transparent 75%), -o-linear-gradient(275deg, #007a33 0, #007a33 90%);
+        background: linear-gradient(115deg, #002f6c 0, #002f6c 28%, transparent 20%), linear-gradient(130deg, #fed141 0, #fed141 43%, transparent 45%), linear-gradient(145deg, #d22630 0, #d22630 58%, transparent 60%), linear-gradient(160deg, #ffffff 0, #ffffff 73%, transparent 75%), linear-gradient(175deg, #007a33 0, #007a33 90%); }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--grenadines {
+        background: -webkit-gradient(linear, left top, right top, color-stop(25%, #0033a0), color-stop(25%, #ffd100), color-stop(75%, #ffd100), color-stop(75%, #00b140));
+        background: -o-linear-gradient(left, #0033a0 25%, #ffd100 25%, #ffd100 75%, #00b140 75%);
+        background: linear-gradient(to right, #0033a0 25%, #ffd100 25%, #ffd100 75%, #00b140 75%); }
+        .navbar-lang-switcher__flag.navbar-lang-switcher__flag--grenadines::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: calc(50% + 0.3rem);
+          -webkit-transform: translate(-50%, -50%) scaleY(1.75) rotate(45deg);
+              -ms-transform: translate(-50%, -50%) scaleY(1.75) rotate(45deg);
+                  transform: translate(-50%, -50%) scaleY(1.75) rotate(45deg);
+          width: 0.2rem;
+          height: 0.2rem;
+          background: #00b140;
+          -webkit-box-shadow: -0.3rem 0 0 #00b140, 0 -0.3rem 0 #00b140;
+                  box-shadow: -0.3rem 0 0 #00b140, 0 -0.3rem 0 #00b140; }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--maldives {
+        background-color: #007a33;
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(16%, #d22630), color-stop(16%, transparent), color-stop(84%, transparent), color-stop(84%, #d22630)), -webkit-gradient(linear, left top, left bottom, color-stop(16%, #d22630), color-stop(16%, transparent), color-stop(84%, transparent), color-stop(84%, #d22630)), radial-gradient(circle at calc(50% + 0.3rem), #007a33 0.35rem, transparent 0.4rem), radial-gradient(circle at calc(50% + 0.1rem), #ffffff 0.35rem, transparent 0.4rem);
+        background-image: -o-linear-gradient(left, #d22630 16%, transparent 16%, transparent 84%, #d22630 84%), -o-linear-gradient(top, #d22630 16%, transparent 16%, transparent 84%, #d22630 84%), -o-radial-gradient(calc(50% + 0.3rem), circle, #007a33 0.35rem, transparent 0.4rem), -o-radial-gradient(calc(50% + 0.1rem), circle, #ffffff 0.35rem, transparent 0.4rem);
+        background-image: linear-gradient(to right, #d22630 16%, transparent 16%, transparent 84%, #d22630 84%), linear-gradient(to bottom, #d22630 16%, transparent 16%, transparent 84%, #d22630 84%), radial-gradient(circle at calc(50% + 0.3rem), #007a33 0.35rem, transparent 0.4rem), radial-gradient(circle at calc(50% + 0.1rem), #ffffff 0.35rem, transparent 0.4rem); }
+      .navbar-lang-switcher__flag.navbar-lang-switcher__flag--us {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(7.69%, #b22234), color-stop(7.69%, #ffffff), color-stop(15.38%, #ffffff), color-stop(15.38%, #b22234), color-stop(23.07%, #b22234), color-stop(23.07%, #ffffff), color-stop(30.76%, #ffffff), color-stop(30.76%, #b22234), color-stop(38.45%, #b22234), color-stop(38.45%, #ffffff), color-stop(46.14%, #ffffff), color-stop(46.14%, #b22234), color-stop(53.83%, #b22234), color-stop(53.83%, #ffffff), color-stop(61.52%, #ffffff), color-stop(61.52%, #b22234), color-stop(69.21%, #b22234), color-stop(69.21%, #ffffff), color-stop(76.9%, #ffffff), color-stop(76.9%, #b22234), color-stop(84.59%, #b22234), color-stop(84.59%, #ffffff), color-stop(92.28%, #ffffff), color-stop(92.28%, #b22234));
+        background: -o-linear-gradient(top, #b22234 7.69%, #ffffff 7.69%, #ffffff 15.38%, #b22234 15.38%, #b22234 23.07%, #ffffff 23.07%, #ffffff 30.76%, #b22234 30.76%, #b22234 38.45%, #ffffff 38.45%, #ffffff 46.14%, #b22234 46.14%, #b22234 53.83%, #ffffff 53.83%, #ffffff 61.52%, #b22234 61.52%, #b22234 69.21%, #ffffff 69.21%, #ffffff 76.9%, #b22234 76.9%, #b22234 84.59%, #ffffff 84.59%, #ffffff 92.28%, #b22234 92.28%);
+        background: linear-gradient(to bottom, #b22234 7.69%, #ffffff 7.69%, #ffffff 15.38%, #b22234 15.38%, #b22234 23.07%, #ffffff 23.07%, #ffffff 30.76%, #b22234 30.76%, #b22234 38.45%, #ffffff 38.45%, #ffffff 46.14%, #b22234 46.14%, #b22234 53.83%, #ffffff 53.83%, #ffffff 61.52%, #b22234 61.52%, #b22234 69.21%, #ffffff 69.21%, #ffffff 76.9%, #b22234 76.9%, #b22234 84.59%, #ffffff 84.59%, #ffffff 92.28%, #b22234 92.28%); }
+        .navbar-lang-switcher__flag.navbar-lang-switcher__flag--us::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #3c3b6e;
+          height: 53.83%;
+          width: 65%; }
+        .navbar-lang-switcher__flag.navbar-lang-switcher__flag--us::after {
+          content: "\2605";
+          position: absolute;
+          top: 0;
+          left: -0.45rem;
+          color: #ffffff;
+          font-size: 0.275rem;
+          text-shadow: 0.45rem 0 0 #ffffff, 0.9rem 0 0 #ffffff, 1.35rem 0 0 #ffffff, 0.675rem 0.225rem 0 #ffffff, 1.125rem 0.225rem 0 #ffffff, 0.45rem 0.45rem 0 #ffffff, 0.9rem 0.45rem 0 #ffffff, 1.35rem 0.45rem 0 #ffffff, 0.675rem 0.675rem 0 #ffffff, 1.125rem 0.675rem 0 #ffffff; }
     .navbar-lang-switcher__country-name {
       white-space: nowrap;
       margin-left: 0.5rem; }

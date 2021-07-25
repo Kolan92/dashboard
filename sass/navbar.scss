@@ -136,46 +136,52 @@
       position: relative;
       overflow: hidden;
       &.navbar-lang-switcher__flag--poland {
-        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%);
+        $red: #cd212a;
+        $white: #ffffff;
+        background: linear-gradient(to bottom, $white 50%, $red 50%);
       }
 
       &.navbar-lang-switcher__flag--italy {
+        $green: #008c45;
+        $white: #f4f5f0;
+        $red: #cd212a;
+
         background: linear-gradient(
           to right,
-          #008c45 33.3%,
-          #f4f5f0 33.3%,
-          #f4f5f0 66.7%,
-          #cd212a 66.7%
+          $green 33.3%,
+          $white 33.3%,
+          $white 66.7%,
+          $red 66.7%
         );
       }
 
       &.navbar-lang-switcher__flag--greece {
-        $greek-blue: #0d5eaf;
-        $greek-white: #ffffff;
+        $blue: #0d5eaf;
+        $white: #ffffff;
         background: linear-gradient(
           to bottom,
-          $greek-blue 11.1%,
-          $greek-white 11.1%,
-          $greek-white 22.2%,
-          $greek-blue 22.2%,
-          $greek-blue 33.3%,
-          $greek-white 33.3%,
-          $greek-white 44.4%,
-          $greek-blue 44.4%,
-          $greek-blue 55.5%,
-          $greek-white 55.5%,
-          $greek-white 66.6%,
-          $greek-blue 66.6%,
-          $greek-blue 77.7%,
-          $greek-white 77.7%,
-          $greek-white 88.8%,
-          $greek-blue 88.8%
+          $blue 11.1%,
+          $white 11.1%,
+          $white 22.2%,
+          $blue 22.2%,
+          $blue 33.3%,
+          $white 33.3%,
+          $white 44.4%,
+          $blue 44.4%,
+          $blue 55.5%,
+          $white 55.5%,
+          $white 66.6%,
+          $blue 66.6%,
+          $blue 77.7%,
+          $white 77.7%,
+          $white 88.8%,
+          $blue 88.8%
         );
 
         &::after {
           position: absolute;
           content: "";
-          background-color: $greek-blue;
+          background-color: $blue;
           height: 56%;
           width: 56%;
           top: 0;
@@ -184,32 +190,167 @@
           background: linear-gradient(
               to bottom,
               transparent 40%,
-              $greek-white 40%,
-              $greek-white 60%,
+              $white 40%,
+              $white 60%,
               transparent 60%
             ),
             linear-gradient(
               to right,
-              $greek-blue 40%,
-              $greek-white 40%,
-              $greek-white 60%,
-              $greek-blue 60%
+              $blue 40%,
+              $white 40%,
+              $white 60%,
+              $blue 60%
             );
         }
       }
 
       &.navbar-lang-switcher__flag--czechia {
-        background: linear-gradient(to bottom, #fff 50%, #cd212a 50%);
+        $red: #cd212a;
+        $white: #ffffff;
+        $blue: #11457e;
+
+        background: linear-gradient(to bottom, $white 50%, $red 50%);
         &::after {
           position: absolute;
           content: "";
-          background-color: #11457e;
+          background-color: $blue;
           height: 1.75rem;
           width: 1.75rem;
           transform: rotate(45deg);
           rotate: 45dag;
           left: -66.6%;
           overflow: hidden;
+        }
+      }
+
+      &.navbar-lang-switcher__flag--seychelles {
+        $blue: #002f6c;
+        $yellow: #fed141;
+        $red: #d22630;
+        $green: #007a33;
+        $white: #ffffff;
+
+        //2% difference to handle jugged gradient color border
+        background: linear-gradient(115deg, $blue 0, $blue 28%, transparent 20%),
+          linear-gradient(130deg, $yellow 0, $yellow 43%, transparent 45%),
+          linear-gradient(145deg, $red 0, $red 58%, transparent 60%),
+          linear-gradient(160deg, $white 0, $white 73%, transparent 75%),
+          linear-gradient(175deg, $green 0, $green 90%);
+      }
+
+      &.navbar-lang-switcher__flag--grenadines {
+        $blue: #0033a0;
+        $yellow: #ffd100;
+        $green: #00b140;
+
+        background: linear-gradient(
+          to right,
+          $blue 25%,
+          $yellow 25%,
+          $yellow 75%,
+          $green 75%
+        );
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: calc(50% + 0.3rem);
+          transform: translate(-50%, -50%) scaleY(1.75) rotate(45deg);
+          width: 0.2rem;
+          height: 0.2rem;
+          background: $green;
+          box-shadow: -0.3rem 0 0 $green, 0 -0.3rem 0 $green;
+        }
+      }
+
+      &.navbar-lang-switcher__flag--maldives {
+        $red: #d22630;
+        $green: #007a33;
+        $white: #ffffff;
+
+        background-color: $green;
+        background-image: linear-gradient(
+            to right,
+            $red 16%,
+            transparent 16%,
+            transparent 84%,
+            $red 84%
+          ),
+          linear-gradient(
+            to bottom,
+            $red 16%,
+            transparent 16%,
+            transparent 84%,
+            $red 84%
+          ),
+          radial-gradient(
+            circle at calc(50% + 0.3rem),
+            $green 0.35rem,
+            transparent 0.4rem
+          ),
+          radial-gradient(
+            circle at calc(50% + 0.1rem),
+            $white 0.35rem,
+            transparent 0.4rem
+          );
+      }
+
+      &.navbar-lang-switcher__flag--us {
+        $red: #b22234;
+        $blue: #3c3b6e;
+        $white: #ffffff;
+
+        background: linear-gradient(
+          to bottom,
+          $red 7.69%,
+          $white 7.69%,
+          $white 15.38%,
+          $red 15.38%,
+          $red 23.07%,
+          $white 23.07%,
+          $white 30.76%,
+          $red 30.76%,
+          $red 38.45%,
+          $white 38.45%,
+          $white 46.14%,
+          $red 46.14%,
+          $red 53.83%,
+          $white 53.83%,
+          $white 61.52%,
+          $red 61.52%,
+          $red 69.21%,
+          $white 69.21%,
+          $white 76.9%,
+          $red 76.9%,
+          $red 84.59%,
+          $white 84.59%,
+          $white 92.28%,
+          $red 92.28%
+        );
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $blue;
+          height: 53.83%;
+          width: 65%;
+        }
+
+        &::after {
+          content: "\2605";
+          position: absolute;
+          top: 0;
+          left: -0.45rem;
+          color: $white;
+          font-size: 0.275rem;
+          text-shadow: 0.45rem 0 0 $white, 0.9rem 0 0 $white, 1.35rem 0 0 $white,
+            0.675rem 0.225rem 0 $white, 1.125rem 0.225rem 0 $white,
+            0.45rem 0.45rem 0 $white, 0.9rem 0.45rem 0 $white,
+            1.35rem 0.45rem 0 $white, 0.675rem 0.675rem 0 $white,
+            1.125rem 0.675rem 0 $white;
         }
       }
     }
