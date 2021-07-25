@@ -106,21 +106,42 @@
 .navbar-lang-switcher {
   position: relative;
   height: 100%;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .navbar-lang-switcher__flag--wrapper {
+      height: 3rem;
+      opacity: 1;
+    }
+  }
   @at-root .navbar-lang-switcher__flag-list {
     position: absolute;
     left: 0;
     top: 100%;
     background: rgba($light, 0.9);
     box-shadow: $shadow-20;
+    overflow: hidden;
   }
 
   @at-root .navbar-lang-switcher__flag--wrapper {
     display: flex;
     align-items: center;
-    height: 3rem;
     padding: 0 1rem;
+    height: 0;
+    opacity: 0;
+
+    @include cubic-bezier-transition(height, opacity, box-shadow);
+
+    &:is(:hover, :focus):not(.navbar-lang-switcher__flag--wrapper--active) {
+      background: $grey-100;
+      box-shadow: $shadow-20;
+    }
 
     &.navbar-lang-switcher__flag--wrapper--active {
+      height: 3rem;
+      opacity: 1;
+
       &::after {
         content: "keyboard_arrow_down";
         font-family: "Material Icons";
