@@ -382,3 +382,106 @@
     }
   }
 }
+
+.navbar-sign-out {
+  height: 100%;
+
+  @at-root .navbar-sign-out__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10rem;
+    color: $dark-secondary;
+    transition-property: opacity, color;
+    transition-duration: $transition-duration-long;
+    position: relative;
+
+    @at-root .navbar-navbar-sign-out_icon {
+      transition: opacity $transition-duration-long;
+      position: absolute;
+      left: 0;
+
+      &:nth-of-type(1) {
+        opacity: 1;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+    }
+
+    @at-root .navbar-sign-out__letters-wrapper {
+      position: absolute;
+      left: 2rem;
+      transition-property: opacity;
+      transition-duration: $transition-duration-long;
+
+      @at-root .navbar-sign-out__letter {
+        display: inline-block;
+        transition-property: transform;
+        transition-duration: $transition-duration-long;
+      }
+
+      &:nth-of-type(1) {
+        opacity: 1;
+        .navbar-sign-out__letter {
+          transform: translateY(0);
+        }
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+
+        .navbar-sign-out__letter {
+          &:nth-of-type(odd) {
+            transform: translateY(-100%);
+          }
+          &:nth-of-type(even) {
+            transform: translateY(100%);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      color: $primary;
+
+      .navbar-navbar-sign-out_icon {
+        &:nth-of-type(1) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(2) {
+          opacity: 1;
+        }
+      }
+
+      .navbar-sign-out__letters-wrapper {
+        .navbar-sign-out__letter {
+          color: $primary;
+        }
+
+        &:nth-of-type(1) {
+          opacity: 0;
+          .navbar-sign-out__letter {
+            &:nth-of-type(even) {
+              transform: translateY(-100%);
+            }
+            &:nth-of-type(odd) {
+              transform: translateY(100%);
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          opacity: 1;
+          .navbar-sign-out__letter {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}

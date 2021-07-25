@@ -190,7 +190,9 @@ $sidebar-collapsed-toggler-height: 3rem;
 }
 
 // avatar
-.sidebar_user {
+.sidebar-user {
+  display: flex;
+  flex-direction: column;
   @at-root .sidebar-user__avatar-wrapper {
     position: relative;
     width: $avatar-size;
@@ -281,6 +283,41 @@ $sidebar-collapsed-toggler-height: 3rem;
       &::after {
         background: $success;
       }
+    }
+  }
+
+  &.sidebar-user--slim {
+    flex-direction: row;
+    align-items: center;
+
+    .sidebar-user__avatar-wrapper {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .sidebar-user__name-wrapper {
+      margin-left: 0.25rem;
+      margin-top: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .sidebar-user__name {
+      font-weight: $font-weight-normal;
+    }
+
+    .sidebar-user__status {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        left: -0.9rem;
+        margin-left: 0;
+        border: 1px solid $grey-50;
+      }
+    }
+
+    .sidebar-user__icon {
+      font-size: $font-size-md;
     }
   }
 }
