@@ -1,0 +1,74 @@
+.container-fluid,
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.container {
+  max-width: 75rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-direction: wrap;
+  margin: 0 -1rem;
+}
+
+[class*="col-"] {
+  margin: 0.5rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    $width: $i / 12 * 100%;
+    width: $width;
+    max-width: $width;
+  }
+}
+
+@media (min-width: 30rem) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      $width: $i / 12 * 100%;
+      width: $width;
+      max-width: $width;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      $width: $i / 12 * 100%;
+      width: $width;
+      max-width: $width;
+    }
+  }
+}
+
+@media (min-width: 62rem) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      $width: $i / 12 * 100%;
+      width: $width;
+      max-width: $width;
+    }
+  }
+}
+
+@media (min-width: 75rem) {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      $width: $i / 12 * 100%;
+      width: $width;
+      max-width: $width;
+    }
+  }
+}
