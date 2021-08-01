@@ -1,5 +1,5 @@
 $primary: #3849aa;
-$secondary: #d69d22;
+$secondary: #e0c52a;
 $success: #32cb00;
 
 $dark-secondary: rgba(#000, 0.54);
@@ -60,6 +60,33 @@ p {
   color: $dark-secondary;
   font-size: $font-size-sm;
   line-height: 1.25;
+}
+
+h2 {
+  font-size: $font-size-xl;
+  color: $dark-secondary;
+}
+
+h3 {
+  font-size: $font-size-md;
+  color: $dark-secondary;
+  text-transform: uppercase;
+}
+
+button {
+  font-size: $font-size-sm;
+  color: $dark-secondary;
+  padding: 0;
+  line-height: 1.1;
+  transition: color $transition-duration-short;
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
 }
 
 @mixin cubic-bezier-transition($properties...) {

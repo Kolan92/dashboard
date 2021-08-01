@@ -1,0 +1,205 @@
+.table {
+  width: 100%;
+
+  @at-root .table__tr {
+    border-bottom: 1px solid $grey-100;
+    @include cubic-bezier-transition(box-shadow);
+
+    &:nth-of-type(even) {
+      background: $grey-50;
+    }
+
+    &:not(.table__tr--thead):hover {
+      box-shadow: $shadow-20;
+    }
+  }
+
+  @at-root .table__th {
+    padding: 0 0.25rem;
+    height: 2.5rem;
+    vertical-align: middle;
+    text-align: left;
+    font-size: $font-size-sm;
+    color: $dark-disabled;
+    font-weight: $font-weight-bold;
+
+    &:nth-of-type(1) {
+      width: 5rem;
+    }
+
+    &.table__th--sortable {
+      cursor: pointer;
+      transition: color $transition-duration-short;
+
+      &:hover {
+        color: $dark-secondary;
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "arrow_drop_up";
+        font-family: "Material Icons";
+        display: inline-block;
+        font-size: $font-size-md;
+        position: relative;
+        top: 0.2rem;
+        opacity: 0;
+        transition: opacity $transition-duration-short;
+      }
+    }
+
+    &.table__th--sortable-asc {
+      color: $primary;
+
+      &::after {
+        opacity: 1;
+        transition: transform $transition-duration-short;
+      }
+
+      &:hover {
+        color: $primary;
+
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &.table__th--sortable-desc {
+      color: $primary;
+
+      &::after {
+        opacity: 1;
+        transform: rotate(180deg);
+        transition: transform $transition-duration-short;
+      }
+
+      &:hover {
+        color: $primary;
+
+        &::after {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  @at-root .table__td {
+    padding: 0 0.25rem;
+    height: 3.5rem;
+    vertical-align: middle;
+    font-size: $font-size-sm;
+    color: $dark-secondary;
+    position: relative;
+  }
+
+  @at-root .table__action-icon {
+    cursor: pointer;
+    font-size: $font-size-lg;
+    padding: 0.5rem;
+    color: $dark-secondary;
+    transition: color $transition-duration-short;
+    margin: -0.5rem -0.25rem;
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  @at-root .table__onboarding {
+    display: block;
+    width: 6rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    color: $light;
+    font-weight: $font-weight-bold;
+
+    &.table__onboarding--completed {
+      background: $gradient-primary;
+    }
+
+    &.table__onboarding--pending {
+      background: $gradient-secondary;
+    }
+  }
+
+  @at-root .table__dots {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0.3rem;
+      height: 0.3rem;
+      background: $dark-secondary;
+      border-radius: 50%;
+      box-shadow: -0.5rem 0 0 0 $dark-secondary, 0.5rem 0 0 0 $dark-secondary;
+      @include cubic-bezier-transition(background, box-shadow);
+    }
+
+    &:hover {
+      &::before {
+        background: $primary;
+        box-shadow: 0.5rem 0 0 0 $primary, -0.5rem 0 0 0 $primary;
+      }
+    }
+  }
+
+  @at-root .table__toggler {
+    display: none;
+    &:checked {
+      ~ .table__dots::before {
+        background: $primary;
+        box-shadow: 0 -0.5rem 0 0 $primary, -0.5rem 0.25rem 0 0 $primary,
+          0.5rem 0.25rem 0 0 $primary, -0.25rem 0.5rem 0 0 $primary,
+          0.25rem 0.5rem 0 0 $primary, 0 0.75rem 0 0 $primary;
+      }
+      ~ .table__more-actions {
+        .table__action {
+          height: 3rem;
+          padding: 0.25rem 0.5rem;
+          &:hover {
+            background: $grey-100;
+            box-shadow: $shadow-20;
+          }
+
+          .material-icons {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    @at-root .table__more-actions {
+      top: 100%;
+      right: 0;
+      position: absolute;
+      background: $light;
+      box-shadow: $shadow-20;
+      overflow: hidden;
+      top: 100%;
+      z-index: 2;
+
+      @at-root .table__action {
+        z-index: 3;
+        height: 0;
+        margin: 0;
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        overflow: hidden;
+        @include cubic-bezier-transition(box-shadow);
+
+        .material-icons {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -108,6 +108,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  z-index: 2;
 
   &:hover {
     .navbar-lang-switcher__flag--wrapper {
