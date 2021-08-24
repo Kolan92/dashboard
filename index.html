@@ -1,358 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Roboto:wght@400;700&display=swap&family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <input
-      type="text"
-      class="navbar-search__input"
-      id="search-input"
-      placeholder="I'm looking for"
-    />
-    <div class="app">
-      <input
-        class="sidebar-toggler__checkbox"
-        type="checkbox"
-        id="sidebar-toggler"
-      />
-      <aside class="sidebar">
-        <label for="sidebar-toggler" class="sidebar-toggler">
-          <i class="sidebar-toggler__icon"></i>
-        </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet"
+        href="css/styles.css" />
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com" />
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Roboto:wght@400;700&display=swap&family=Material+Icons"
+        rel="stylesheet" />
+</head>
 
-        <section class="sidebar__section">
-          <div class="sidebar-logo">
-            <a href="#" class="sidebar-logo__wrapper">
-              <h1 class="sidebar-logo__text" data-text="MyApp">MyApp</h1>
+<body>
+  <input type="text"
+         class="navbar-search__input"
+         id="search-input"
+         placeholder="I'm looking for" />
+  <div class="app">
+    <input class="sidebar-toggler__checkbox"
+           type="checkbox"
+           id="sidebar-toggler" />
+    <aside class="sidebar">
+      <label for="sidebar-toggler"
+             class="sidebar-toggler">
+        <i class="sidebar-toggler__icon"></i>
+      </label>
+
+      <section class="sidebar__section">
+        <div class="sidebar-logo">
+          <a href="#"
+             class="sidebar-logo__wrapper">
+            <h1 class="sidebar-logo__text"
+                data-text="MyApp">MyApp</h1>
+          </a>
+        </div>
+      </section>
+
+      <section class="sidebar__section">
+        <div class="sidebar-user">
+          <div class="sidebar-user__avatar-wrapper">
+            <img class="sidebar-user__avatar"
+                 src="https://randomuser.me/api/portraits/women/57.jpg"
+                 alt="User" />
+            <a href="#"
+               class="sidebar-user__overlay">
+              <i class="material-icons sidebar-user__icon">add_a_photo</i>
             </a>
           </div>
-        </section>
 
-        <section class="sidebar__section">
-          <div class="sidebar-user">
-            <div class="sidebar-user__avatar-wrapper">
-              <img
-                class="sidebar-user__avatar"
-                src="https://randomuser.me/api/portraits/women/57.jpg"
-                alt="User"
-              />
-              <a href="#" class="sidebar-user__overlay">
-                <i class="material-icons sidebar-user__icon">add_a_photo</i>
+          <div class="sidebar-user__name-wrapper">
+            <a class="sidebar-user__name"
+               href="#">Rita Cook</a>
+            <i class="sidebar-user__status sidebar-user__status--online">
+              Online
+            </i>
+          </div>
+        </div>
+      </section>
+
+      <section class="sidebar__section">
+        <div class="sidebar-nav">
+          <h4 class="sidebar-nav__header"
+              data-toggled-shortcut="Nav">
+            Navigation
+          </h4>
+          <ul>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--primary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">home</i>
+                </div>
+                <span class="sidebar-nav__title">Home</span>
               </a>
-            </div>
+            </li>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--primary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">face</i>
+                </div>
+                <span class="sidebar-nav__title">Users</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--primary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">favorite</i>
+                </div>
+                <span class="sidebar-nav__title">Favorite</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--primary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">widgets</i>
+                </div>
+                <span class="sidebar-nav__title">Widgets</span>
+                <span class="sidebar-nav__notification">New!</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-            <div class="sidebar-user__name-wrapper">
-              <a class="sidebar-user__name" href="#">Rita Cook</a>
-              <i class="sidebar-user__status sidebar-user__status--online">
-                Online
-              </i>
-            </div>
-          </div>
-        </section>
-
-        <section class="sidebar__section">
-          <div class="sidebar-nav">
-            <h4 class="sidebar-nav__header" data-toggled-shortcut="Nav">
-              Navigation
-            </h4>
-            <ul>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--primary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">home</i>
-                  </div>
-                  <span class="sidebar-nav__title">Home</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--primary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">face</i>
-                  </div>
-                  <span class="sidebar-nav__title">Users</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--primary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">favorite</i>
-                  </div>
-                  <span class="sidebar-nav__title">Favorite</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--primary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">widgets</i>
-                  </div>
-                  <span class="sidebar-nav__title">Widgets</span>
-                  <span class="sidebar-nav__notification">New!</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="sidebar__section">
-          <div class="sidebar-nav">
-            <h4 class="sidebar-nav__header" data-toggled-shortcut="COM">
-              Community
-            </h4>
-            <ul>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--secondary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i
-                      class="
+      <section class="sidebar__section">
+        <div class="sidebar-nav">
+          <h4 class="sidebar-nav__header"
+              data-toggled-shortcut="COM">
+            Community
+          </h4>
+          <ul>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--secondary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="
                         material-icons
                         sidebar-nav__icon sidebar-nav__icon--alert
-                      "
-                    >
-                      notifications_active
-                    </i>
-                  </div>
-                  <span class="sidebar-nav__title">Notifications</span>
-                  <span class="sidebar-nav__notification">5</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--secondary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">mail</i>
-                  </div>
-                  <span class="sidebar-nav__title">Mail</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--secondary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">thumb_up</i>
-                  </div>
-                  <span class="sidebar-nav__title">Social</span>
-                  <span class="sidebar-nav__notification">18</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="sidebar-nav__item sidebar-nav__item--secondary"
-                >
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">date_range</i>
-                  </div>
-                  <span class="sidebar-nav__title">Calendar</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="sidebar__section">
-          <div class="sidebar-nav">
-            <h4 class="sidebar-nav__header" data-toggled-shortcut="Set">
-              Settings
-            </h4>
-            <ul>
-              <li>
-                <a href="#" class="sidebar-nav__item">
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">widgets</i>
-                  </div>
-                  <span class="sidebar-nav__title">Profile</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="sidebar-nav__item">
-                  <div class="sidebar-nav__icon-wrapper">
-                    <i class="material-icons sidebar-nav__icon">widgets</i>
-                  </div>
-                  <span class="sidebar-nav__title">General</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </aside>
-
-      <main class="app__page">
-        <nav class="navbar">
-          <div class="navbar-search">
-            <label class="navbar-search__label-icon" for="search-input">
-              <i class="material-icons navbar-search__icon">search</i>
-              <span class="navbar-search__text">Search</span>
-            </label>
-          </div>
-
-          <div class="navbar-links">
-            <div class="navbar__section">
-              <div class="navbar-lang-switcher">
-                <a href="#" class="navbar-lang-switcher__flag--wrapper navbar-lang-switcher__flag--wrapper--active">
-                  <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--poland"></i>
-                  <span class="navbar-lang-switcher__country-name">Polski</span>
-                </a>
-                <ul class="navbar-lang-switcher__flag-list">
-                  <li>
-                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
-                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--italy"></i>
-                      <span class="navbar-lang-switcher__country-name">
-                        Italiano
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
-                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--greece"></i>
-                      <span class="navbar-lang-switcher__country-name">
-                        Greece
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
-                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--czechia"></i>
-                      <span class="navbar-lang-switcher__country-name">
-                        Czech Republic
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
-                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--seychelles"></i>
-                      <span class="navbar-lang-switcher__country-name">
-                        Seychelles
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
-                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--grenadines"></i>
-                      <span class="navbar-lang-switcher__country-name">
-                        Grenadines
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
-                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--maldives"></i>
-                      <span class="navbar-lang-switcher__country-name">
-                        Maldives
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
-                      <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--us"></i>
-                      <span class="navbar-lang-switcher__country-name">
-                        United States
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="navbar__section">
-              <div class="sidebar-user sidebar-user--slim">
-                <div class="sidebar-user__avatar-wrapper">
-                  <img
-                    class="sidebar-user__avatar"
-                    src="https://randomuser.me/api/portraits/women/57.jpg"
-                    alt="User"
-                  />
-                  <a href="#" class="sidebar-user__overlay">
-                    <i class="material-icons sidebar-user__icon">add_a_photo</i>
-                  </a>
-                </div>
-    
-                <div class="sidebar-user__name-wrapper">
-                  <a class="sidebar-user__name" href="#">Rita Cook</a>
-                  <i class="sidebar-user__status sidebar-user__status--online">
-                    Online
+                      ">
+                    notifications_active
                   </i>
                 </div>
-            </div>
-          </div>
-            <div class="navbar__section">
-              <div class="navbar-sign-out">
-                <a href="#" class="navbar-sign-out__button">
-                  <i class="material-icons navbar-navbar-sign-out_icon">power_settings_new</i>
-                  <i class="material-icons navbar-navbar-sign-out_icon">sentiment_very_satisfied</i>
-                  <div class="navbar-sign-out__letters-wrapper">
-                    <span class="navbar-sign-out__letter">S</span>
-                    <span class="navbar-sign-out__letter">i</span>
-                    <span class="navbar-sign-out__letter">g</span>
-                    <span class="navbar-sign-out__letter">n</span>
-                    <span class="navbar-sign-out__letter">&nbsp;</span>
-                    <span class="navbar-sign-out__letter">O</span>
-                    <span class="navbar-sign-out__letter">u</span>
-                    <span class="navbar-sign-out__letter">t</span>
-                  </div>
-                  <div class="navbar-sign-out__letters-wrapper">
-                    <span class="navbar-sign-out__letter">S</span>
-                    <span class="navbar-sign-out__letter">e</span>
-                    <span class="navbar-sign-out__letter">e</span>
-                    <span class="navbar-sign-out__letter">&nbsp;</span>
-                    <span class="navbar-sign-out__letter">y</span>
-                    <span class="navbar-sign-out__letter">o</span>
-                    <span class="navbar-sign-out__letter">u</span>
-                    <span class="navbar-sign-out__letter">!</span>
-                  </div>                
-                </a>
-            </div>
-          </div>
-        </nav>
-
-        <div class="dashboard">
-
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <div class="dashboard__section dashboard__section--transparent dashboard__section--small">
-                  <div class="dashboard__heading dashboard__heading--main">
-                    <h2>Dashboard</h2>
-                  </div>
+                <span class="sidebar-nav__title">Notifications</span>
+                <span class="sidebar-nav__notification">5</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--secondary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">mail</i>
                 </div>
+                <span class="sidebar-nav__title">Mail</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--secondary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">thumb_up</i>
+                </div>
+                <span class="sidebar-nav__title">Social</span>
+                <span class="sidebar-nav__notification">18</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item sidebar-nav__item--secondary">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">date_range</i>
+                </div>
+                <span class="sidebar-nav__title">Calendar</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="sidebar__section">
+        <div class="sidebar-nav">
+          <h4 class="sidebar-nav__header"
+              data-toggled-shortcut="Set">
+            Settings
+          </h4>
+          <ul>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">widgets</i>
+                </div>
+                <span class="sidebar-nav__title">Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="sidebar-nav__item">
+                <div class="sidebar-nav__icon-wrapper">
+                  <i class="material-icons sidebar-nav__icon">widgets</i>
+                </div>
+                <span class="sidebar-nav__title">General</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </aside>
 
+    <main class="app__page">
+      <nav class="navbar">
+        <div class="navbar-search">
+          <label class="navbar-search__label-icon"
+                 for="search-input">
+            <i class="material-icons navbar-search__icon">search</i>
+            <span class="navbar-search__text">Search</span>
+          </label>
+        </div>
+
+        <div class="navbar-links">
+          <div class="navbar__section">
+            <div class="navbar-lang-switcher">
+              <a href="#"
+                 class="navbar-lang-switcher__flag--wrapper navbar-lang-switcher__flag--wrapper--active">
+                <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--poland"></i>
+                <span class="navbar-lang-switcher__country-name">Polski</span>
+              </a>
+              <ul class="navbar-lang-switcher__flag-list">
+                <li>
+                  <a href="#"
+                     class="navbar-lang-switcher__flag--wrapper">
+                    <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--italy"></i>
+                    <span class="navbar-lang-switcher__country-name">
+                      Italiano
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                     class="navbar-lang-switcher__flag--wrapper">
+                    <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--greece"></i>
+                    <span class="navbar-lang-switcher__country-name">
+                      Greece
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                     class="navbar-lang-switcher__flag--wrapper">
+                    <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--czechia"></i>
+                    <span class="navbar-lang-switcher__country-name">
+                      Czech Republic
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                     class="navbar-lang-switcher__flag--wrapper">
+                    <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--seychelles"></i>
+                    <span class="navbar-lang-switcher__country-name">
+                      Seychelles
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                     class="navbar-lang-switcher__flag--wrapper">
+                    <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--grenadines"></i>
+                    <span class="navbar-lang-switcher__country-name">
+                      Grenadines
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                     class="navbar-lang-switcher__flag--wrapper">
+                    <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--maldives"></i>
+                    <span class="navbar-lang-switcher__country-name">
+                      Maldives
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                     class="navbar-lang-switcher__flag--wrapper">
+                    <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--us"></i>
+                    <span class="navbar-lang-switcher__country-name">
+                      United States
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar__section">
+            <div class="sidebar-user sidebar-user--slim">
+              <div class="sidebar-user__avatar-wrapper">
+                <img class="sidebar-user__avatar"
+                     src="https://randomuser.me/api/portraits/women/57.jpg"
+                     alt="User" />
+                <a href="#"
+                   class="sidebar-user__overlay">
+                  <i class="material-icons sidebar-user__icon">add_a_photo</i>
+                </a>
+              </div>
+
+              <div class="sidebar-user__name-wrapper">
+                <a class="sidebar-user__name"
+                   href="#">Rita Cook</a>
+                <i class="sidebar-user__status sidebar-user__status--online">
+                  Online
+                </i>
               </div>
             </div>
+          </div>
+          <div class="navbar__section">
+            <div class="navbar-sign-out">
+              <a href="#"
+                 class="navbar-sign-out__button">
+                <i class="material-icons navbar-navbar-sign-out_icon">power_settings_new</i>
+                <i class="material-icons navbar-navbar-sign-out_icon">sentiment_very_satisfied</i>
+                <div class="navbar-sign-out__letters-wrapper">
+                  <span class="navbar-sign-out__letter">S</span>
+                  <span class="navbar-sign-out__letter">i</span>
+                  <span class="navbar-sign-out__letter">g</span>
+                  <span class="navbar-sign-out__letter">n</span>
+                  <span class="navbar-sign-out__letter">&nbsp;</span>
+                  <span class="navbar-sign-out__letter">O</span>
+                  <span class="navbar-sign-out__letter">u</span>
+                  <span class="navbar-sign-out__letter">t</span>
+                </div>
+                <div class="navbar-sign-out__letters-wrapper">
+                  <span class="navbar-sign-out__letter">S</span>
+                  <span class="navbar-sign-out__letter">e</span>
+                  <span class="navbar-sign-out__letter">e</span>
+                  <span class="navbar-sign-out__letter">&nbsp;</span>
+                  <span class="navbar-sign-out__letter">y</span>
+                  <span class="navbar-sign-out__letter">o</span>
+                  <span class="navbar-sign-out__letter">u</span>
+                  <span class="navbar-sign-out__letter">!</span>
+                </div>
+              </a>
+            </div>
+          </div>
+      </nav>
 
-            <div class="row">
-              <div class="col-12">
-                <div class="dashboard__section">
-                  <div class="dashboard__heading">
-                    <h3>New Clients</h3>
-                  </div>
+      <div class="dashboard">
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="dashboard__section dashboard__section--transparent dashboard__section--small">
+                <div class="dashboard__heading dashboard__heading--main">
+                  <h2>Dashboard</h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="dashboard__section">
+                <div class="dashboard__heading">
+                  <h3>New Clients</h3>
+                </div>
 
                 <table class="table">
                   <thead class="table__thead">
@@ -370,18 +371,22 @@
                   <tbody class="table__tbody">
                     <tr class="table__tr">
                       <td class="table__td">
-                          <button class="material-icons table__action-icon">edit</button>
-                          <button class="material-icons table__action-icon">delete</button>
+                        <button class="material-icons table__action-icon">edit</button>
+                        <button class="material-icons table__action-icon">delete</button>
                       </td>
                       <td class="table__td">12118</td>
                       <td class="table__td">Aaron</td>
                       <td class="table__td">Sullivan</td>
                       <td class="table__td">a.sullivan@ex.com</td>
                       <td class="table__td">13/08/2018</td>
-                      <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
+                      <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span>
+                      </td>
                       <td class="table__td">
-                        <input class="table__toggler" id="more-actions-1" type="checkbox" />
-                        <label class="table__dots" for="more-actions-1"></label>
+                        <input class="table__toggler"
+                               id="more-actions-1"
+                               type="checkbox" />
+                        <label class="table__dots"
+                               for="more-actions-1"></label>
                         <ul class="table__more-actions">
                           <li class="table__action"><i class="material-icons">edit</i><span>Edit</span></li>
                           <li class="table__action"><i class="material-icons">delete</i><span>Remove</span></li>
@@ -391,21 +396,25 @@
                           <li class="table__action"><i class="material-icons">code</i><span>Copy to JSON</span></li>
                         </ul>
                       </td>
-                  </tr>
-                  <tr class="table__tr">
+                    </tr>
+                    <tr class="table__tr">
                       <td class="table__td">
-                          <button class="material-icons table__action-icon">edit</button>
-                          <button class="material-icons table__action-icon">delete</button>
+                        <button class="material-icons table__action-icon">edit</button>
+                        <button class="material-icons table__action-icon">delete</button>
                       </td>
                       <td class="table__td">12048</td>
                       <td class="table__td">Arianna</td>
                       <td class="table__td">Stewart</td>
                       <td class="table__td">a.stewart@ex.com</td>
                       <td class="table__td">12/06/2018</td>
-                      <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
+                      <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span>
+                      </td>
                       <td class="table__td">
-                        <input class="table__toggler" id="more-actions-2" type="checkbox" />
-                        <label class="table__dots" for="more-actions-2"></label>
+                        <input class="table__toggler"
+                               id="more-actions-2"
+                               type="checkbox" />
+                        <label class="table__dots"
+                               for="more-actions-2"></label>
                         <ul class="table__more-actions">
                           <li class="table__action"><i class="material-icons">edit</i><span>Edit</span></li>
                           <li class="table__action"><i class="material-icons">delete</i><span>Remove</span></li>
@@ -415,21 +424,25 @@
                           <li class="table__action"><i class="material-icons">code</i><span>Copy to JSON</span></li>
                         </ul>
                       </td>
-                  </tr>
-                  <tr class="table__tr">
+                    </tr>
+                    <tr class="table__tr">
                       <td class="table__td">
-                          <button class="material-icons table__action-icon">edit</button>
-                          <button class="material-icons table__action-icon">delete</button>
+                        <button class="material-icons table__action-icon">edit</button>
+                        <button class="material-icons table__action-icon">delete</button>
                       </td>
                       <td class="table__td">22312</td>
                       <td class="table__td">Marlene</td>
                       <td class="table__td">Johnson</td>
                       <td class="table__td">m.johnson@ex.com</td>
                       <td class="table__td">12/07/2018</td>
-                      <td class="table__td"><span class="table__onboarding table__onboarding--completed">Completed</span></td>
-                      <td class="table__td">   
-                        <input class="table__toggler" id="more-actions-3" type="checkbox" />
-                        <label class="table__dots" for="more-actions-3"></label>
+                      <td class="table__td"><span
+                              class="table__onboarding table__onboarding--completed">Completed</span></td>
+                      <td class="table__td">
+                        <input class="table__toggler"
+                               id="more-actions-3"
+                               type="checkbox" />
+                        <label class="table__dots"
+                               for="more-actions-3"></label>
                         <ul class="table__more-actions">
                           <li class="table__action"><i class="material-icons">edit</i><span>Edit</span></li>
                           <li class="table__action"><i class="material-icons">delete</i><span>Remove</span></li>
@@ -439,44 +452,181 @@
                           <li class="table__action"><i class="material-icons">code</i><span>Copy to JSON</span></li>
                         </ul>
                       </td>
-                  </tr>
-                  <tr class="table__tr">
-                    <td class="table__td">
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
                         <button class="material-icons table__action-icon">edit</button>
                         <button class="material-icons table__action-icon">delete</button>
-                    </td>
-                    <td class="table__td">22312</td>
-                    <td class="table__td">Marlene</td>
-                    <td class="table__td">Johnson</td>
-                    <td class="table__td">m.johnson@ex.com</td>
-                    <td class="table__td">12/07/2018</td>
-                    <td class="table__td"><span class="table__onboarding table__onboarding--completed">Completed</span></td>
-                    <td class="table__td">   
-                      <input class="table__toggler" id="more-actions-4" type="checkbox" />
-                      <label class="table__dots" for="more-actions-4"></label>
-                      <ul class="table__more-actions">
-                        <li class="table__action"><i class="material-icons">edit</i><span>Edit</span></li>
-                        <li class="table__action"><i class="material-icons">delete</i><span>Remove</span></li>
-                        <li class="table__action"><i class="material-icons">mail</i><span>Send Email</span></li>
-                        <li class="table__action"><i class="material-icons">message</i><span>Send Message</span></li>
-                        <li class="table__action"><i class="material-icons">note_add</i><span>Add Note</span></li>
-                        <li class="table__action"><i class="material-icons">code</i><span>Copy to JSON</span></li>
-                      </ul>
-                    </td>
-                </tr>
+                      </td>
+                      <td class="table__td">22312</td>
+                      <td class="table__td">Marlene</td>
+                      <td class="table__td">Johnson</td>
+                      <td class="table__td">m.johnson@ex.com</td>
+                      <td class="table__td">12/07/2018</td>
+                      <td class="table__td"><span
+                              class="table__onboarding table__onboarding--completed">Completed</span></td>
+                      <td class="table__td">
+                        <input class="table__toggler"
+                               id="more-actions-4"
+                               type="checkbox" />
+                        <label class="table__dots"
+                               for="more-actions-4"></label>
+                        <ul class="table__more-actions">
+                          <li class="table__action"><i class="material-icons">edit</i><span>Edit</span></li>
+                          <li class="table__action"><i class="material-icons">delete</i><span>Remove</span></li>
+                          <li class="table__action"><i class="material-icons">mail</i><span>Send Email</span></li>
+                          <li class="table__action"><i class="material-icons">message</i><span>Send Message</span></li>
+                          <li class="table__action"><i class="material-icons">note_add</i><span>Add Note</span></li>
+                          <li class="table__action"><i class="material-icons">code</i><span>Copy to JSON</span></li>
+                        </ul>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-xl-6">
+              <div class="dashboard__section">
+                <div class="dashboard__charts-wrapper">
+                  <div class="dashboard__chart-wrapper">
+                    <div class="dashboard__heading">
+                      <h3>Total revenue</h3>
+                    </div>
+                    <div class="dashboard__chart-nav">
+
+                      <button class="button dashboard__chart-link dashboard__chart-link--main">Yearly</button>
+                      <button class="dashboard__chart-link">Jun</button>
+                      <button class="dashboard__chart-link">Jul</button>
+                      <button class="dashboard__chart-link">Aug</button>
+                    </div>
+                    <div class="progress-chart"
+                         data-percentage="83"
+                         data-slogan="of target">
+                      <i class="progress-chart__inner-background"></i>
+                      <i class="progress-chart__mask"></i>
+                      <i class="progress-chart__progress progress-chart__progress--first-part"></i>
+                      <i class="progress-chart__progress progress-chart__progress--second-part"></i>
+                      <i class="progress-chart__progress progress-chart__progress--third-part"></i>
+                      <i class="progress-chart__mask"></i>
+                    </div>
+                  </div>
+                  <div class="dashboard__chart-wrapper">
+                    <div class="dashboard__heading">
+                      <h3>Total Costs</h3>
+                    </div>
+
+                    <div class="dashboard__chart-nav">
+                      <label for="budget-calendar"
+                             class="button button--secondary dashboard__calendar-toggler">
+                        <i class="material-icons dashboard__calendar-toggler-icon">date_range</i>
+                      </label>
+                      <input id="budget-calendar"
+                             type="checkbox"
+                             class="dashboard__calendar-checkbox">
+                      <div class="calendar">
+                        <div class="calendar__month-nav">
+                          <button class="calendar__switcher calendar__switcher--left"></button>
+                          <span class="calendar__month-name">August</span>
+                          <button class="calendar__switcher calendar__switcher--right"></button>
+                        </div>
+
+                        <div class="calendar__labels-wrapper">
+                          <span class="calendar__label">Sun</span>
+                          <span class="calendar__label">Mon</span>
+                          <span class="calendar__label">Tue</span>
+                          <span class="calendar__label">Wed</span>
+                          <span class="calendar__label">Thu</span>
+                          <span class="calendar__label">Fri</span>
+                          <span class="calendar__label">Sat</span>
+                        </div>
+                        <div class="calendar__days-wrapper">
+                          <i class="calendar__day calendar__day--inactive">26</i>
+                          <i class="calendar__day calendar__day--inactive">27</i>
+                          <i class="calendar__day calendar__day--inactive">28</i>
+                          <i class="calendar__day calendar__day--inactive">29</i>
+                          <i class="calendar__day calendar__day--inactive">30</i>
+                          <i class="calendar__day calendar__day--inactive">31</i>
+                          <i class="calendar__day">01</i>
+                          <i class="calendar__day">02</i>
+                          <i class="calendar__day">03</i>
+                          <i class="calendar__day">04</i>
+                          <i class="calendar__day calendar__day--checked">05</i>
+                          <i class="calendar__day calendar__day--checked">06</i>
+                          <i class="calendar__day calendar__day--checked">07</i>
+                          <i class="calendar__day calendar__day--checked">08</i>
+                          <i class="calendar__day calendar__day--checked">09</i>
+                          <i class="calendar__day calendar__day--checked">10</i>
+                          <i class="calendar__day calendar__day--checked">11</i>
+                          <i class="calendar__day calendar__day--checked">12</i>
+                          <i class="calendar__day calendar__day--checked">13</i>
+                          <i class="calendar__day calendar__day--checked">14</i>
+                          <i class="calendar__day calendar__day--checked">15</i>
+                          <i class="calendar__day calendar__day--checked">16</i>
+                          <i class="calendar__day calendar__day--checked">17</i>
+                          <i class="calendar__day calendar__day--checked">18</i>
+                          <i class="calendar__day">19</i>
+                          <i class="calendar__day">20</i>
+                          <i class="calendar__day">21</i>
+                          <i class="calendar__day">22</i>
+                          <i class="calendar__day">23</i>
+                          <i class="calendar__day calendar__day--today">24</i>
+                          <i class="calendar__day">25</i>
+                          <i class="calendar__day">26</i>
+                          <i class="calendar__day">27</i>
+                          <i class="calendar__day">28</i>
+                          <i class="calendar__day">29</i>
+                          <i class="calendar__day">30</i>
+                          <i class="calendar__day">31</i>
+                          <i class="calendar__day calendar__day--inactive">01</i>
+                          <i class="calendar__day calendar__day--inactive">02</i>
+                          <i class="calendar__day calendar__day--inactive">03</i>
+                          <i class="calendar__day calendar__day--inactive">04</i>
+                          <i class="calendar__day calendar__day--inactive">05</i>
+                        </div>
+                      </div>
+                      <span class="dashboard__date-range">12.08.2021 - 14.08.2021</span>
+                    </div>
+
+                    <div class="progress-chart progress-chart--value"
+                         data-percentage="26"
+                         data-slogan="of total budget"
+                         data-value="11M">
+                      <i class="progress-chart__inner-background"></i>
+                      <i class="progress-chart__mask"></i>
+                      <i class="progress-chart__progress progress-chart__progress--first-part"></i>
+                      <i class="progress-chart__progress progress-chart__progress--second-part"></i>
+                      <i class="progress-chart__progress progress-chart__progress--third-part"></i>
+                      <i class="progress-chart__mask"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="dashboard__more-charts">
+                  <a href="#"
+                     class="dashboard__more-charts-link">Click here</a> to see more statistics.
+                </p>
               </div>
             </div>
 
+            <div class="col-12 col-xl-6">
+              <div class="dashboard__section">
+                Sekcja 2
+              </div>
+            </div>
           </div>
-
         </div>
 
-        <footer>Footer</footer>
-      </main>
-    </div>
-  </body>
+      </div>
+  </div>
+
+
+
+  <footer>Footer</footer>
+  </main>
+  </div>
+</body>
+
 </html>

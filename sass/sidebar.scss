@@ -108,10 +108,7 @@ $sidebar-collapsed-toggler-height: 3rem;
   @at-root .sidebar-toggler__icon {
     width: 0.75rem;
     height: 0.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include center-absolute();
 
     &::before,
     &::after {

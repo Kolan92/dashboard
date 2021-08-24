@@ -1,0 +1,139 @@
+$chart-size: 10rem;
+$chart-border-size: 0.75rem;
+
+.progress-chart {
+  width: $chart-size;
+  height: $chart-size;
+
+  background: $grey-100;
+  border-radius: 50%;
+  box-shadow: $shadow-primary;
+  position: relative;
+  margin: 1.25rem auto 0;
+  $chart-color: $primary;
+
+  &::before {
+    content: attr(data-percentage) "%";
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 0.75rem);
+    transform: translate(-50%, -50%);
+    font-size: $font-size-xxl;
+    white-space: nowrap;
+    color: $chart-color;
+  }
+
+  &::after {
+    content: attr(data-slogan);
+    z-index: 5;
+    position: absolute;
+    width: calc(100% - 2rem);
+    left: 50%;
+    top: calc(50% + 0.5rem);
+    transform: translateX(-50%);
+    font-size: $font-size-md;
+    white-space: wrap;
+    color: $dark-disabled;
+    text-align: center;
+    line-height: 1.25rem;
+  }
+
+  @at-root .progress-chart__inner-background {
+    @include center-absolute();
+    z-index: 4;
+    background: $light;
+    border-radius: 50%;
+    display: block;
+    width: $chart-size - $chart-border-size;
+    height: $chart-size - $chart-border-size;
+  }
+
+  @at-root .progress-chart__progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    border: $chart-size/2 solid;
+    border-color: $chart-color transparent transparent;
+    transform: rotate(-45deg);
+
+    &.progress-chart__progress--first-part {
+      border-color: $chart-color transparent transparent;
+      transform: rotate(-45deg);
+      z-index: 1;
+    }
+    &.progress-chart__progress--second-part {
+      border-color: $chart-color $chart-color transparent transparent;
+      transform: rotate(45deg);
+      z-index: 1;
+      opacity: 0;
+    }
+    &.progress-chart__progress--third-part {
+      border-color: $chart-color $chart-color transparent transparent;
+      transform: rotate(45deg);
+      z-index: 3;
+      opacity: 0;
+    }
+  }
+
+  @at-root .progress-chart__mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    border: $chart-size/2 solid;
+    border-color: transparent $grey-100 transparent transparent;
+    transform: rotate(-135deg);
+    z-index: 2;
+  }
+
+  &.progress-chart--value {
+    $chart-color: $secondary;
+    box-shadow: $shadow-secondary;
+
+    &::before {
+      content: attr(data-value);
+      color: $chart-color;
+    }
+
+    &::after {
+      content: attr(data-slogan) " (" attr(data-percentage) "%)";
+    }
+
+    .progress-chart__progress {
+      &.progress-chart__progress--first-part {
+        border-top-color: $chart-color;
+      }
+      &.progress-chart__progress--second-part,
+      &.progress-chart__progress--third-part {
+        border-top-color: $chart-color;
+        border-right-color: $chart-color;
+      }
+    }
+  }
+
+  $percentage-step: 3.6;
+
+  @for $i from 0 through 100 {
+    &[data-percentage="#{$i}"] {
+      .progress-chart__progress.progress-chart__progress--first-part {
+        transform: rotate(-45deg + min($i, 25) * $percentage-step);
+      }
+
+      @if $i > 25 {
+        .progress-chart__progress.progress-chart__progress--second-part {
+          transform: rotate(-135deg + min($i, 75) * $percentage-step);
+          opacity: 1;
+        }
+      }
+
+      @if $i > 75 {
+        .progress-chart__progress.progress-chart__progress--third-part {
+          transform: rotate(-135deg + $i * $percentage-step);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

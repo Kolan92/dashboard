@@ -1,0 +1,118 @@
+$calendar-day-size: 3rem;
+$calendar-width: $calendar-day-size * 7;
+
+.calendar {
+  background: $light;
+  box-shadow: $shadow-20;
+  padding: 1rem;
+
+  @at-root .calendar__month-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+
+    @at-root .calendar__month-name {
+    }
+
+    @at-root .calendar__switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $font-size-md;
+      cursor: pointer;
+      padding: 1rem;
+      margin: -1rem;
+
+      &:hover {
+        color: $secondary;
+      }
+
+      &::after {
+        font-family: "Material Icons";
+      }
+
+      &.calendar__switcher--left:after {
+        content: "keyboard_arrow_left";
+      }
+      &.calendar__switcher--right:after {
+        content: "keyboard_arrow_right";
+      }
+    }
+
+    @at-root .calendar__labels-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: $calendar-width;
+
+      @at-root .calendar__label {
+        width: $calendar-day-size;
+        height: $calendar-day-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        color: $dark-disabled;
+      }
+    }
+  }
+
+  @at-root .calendar__days-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: $calendar-width;
+
+    @at-root .calendar__day {
+      display: inline-block;
+      width: $calendar-day-size;
+      height: $calendar-day-size;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $font-size-sm;
+      cursor: pointer;
+      position: relative;
+      transition: box-shadow $transition-duration-short;
+
+      &::before {
+        content: "";
+        @include center-absolute();
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        box-shadow: $shadow-10;
+      }
+
+      &.calendar__day--inactive {
+        color: $dark-disabled;
+        opacity: 0.5;
+
+        transition: opacity $transition-duration-short;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &.calendar__day--checked {
+        color: $light;
+
+        &::before {
+          background: $gradient-secondary;
+          box-shadow: $shadow-secondary;
+        }
+      }
+
+      &.calendar__day--today {
+        color: $secondary;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

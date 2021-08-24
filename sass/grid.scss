@@ -14,12 +14,11 @@
 .row {
   display: flex;
   flex-direction: row;
-  flex-direction: wrap;
+  flex-wrap: wrap;
   margin: 0 -1rem;
 }
 
 [class*="col-"] {
-  margin: 0.5rem;
   padding: 0 1rem;
   box-sizing: border-box;
   position: relative;

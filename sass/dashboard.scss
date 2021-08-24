@@ -27,3 +27,90 @@
     }
   }
 }
+
+.dashboard__charts-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @at-root .dashboard__chart-wrapper {
+    width: 50%;
+    &:nth-of-type(1) {
+      padding-right: 1rem;
+    }
+    &:nth-of-type(2) {
+      padding-left: 1rem;
+    }
+  }
+
+  @at-root .dashboard__chart-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @at-root .dashboard__chart-link {
+      width: 25%;
+      max-width: 3rem;
+      padding: 1rem 0;
+
+      &.dashboard__chart-link--main {
+        padding: 1rem;
+        margin-right: 0.5rem;
+        width: auto;
+        max-width: none;
+      }
+    }
+
+    @at-root .dashboard__calendar-toggler {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+    }
+
+    @at-root .dashboard__calendar-toggler-icon {
+      @include center-absolute();
+    }
+
+    @at-root .dashboard__date-range {
+      color: $dark-disabled;
+      font-size: $font-size-sm;
+      margin-left: 1rem;
+    }
+
+    @at-root .dashboard__calendar-checkbox {
+      display: none;
+      &:checked + .calendar {
+        display: block;
+      }
+    }
+
+    @at-root .calendar {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 3rem;
+      z-index: 100;
+    }
+
+    @at-root .dashboard__more-charts {
+      text-align: center;
+      margin-top: 2rem;
+
+      @at-root .dashboard__more-charts-link {
+        font-weight: $font-weight-bold;
+        color: $dark-secondary;
+        @include cubic-bezier-transition(color);
+
+        &:hover,
+        &:focus {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

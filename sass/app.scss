@@ -101,6 +101,12 @@ button {
   transition-duration: $duration;
   transition-timing-function: cubic-bezier(0.24, 0.22, 0.015, 1.56);
 }
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .app {
   display: flex;
