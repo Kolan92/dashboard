@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $avatar-size: 6rem;
 $sidebar-collapsed-toggler-height: 3rem;
 
@@ -46,8 +48,8 @@ $sidebar-collapsed-toggler-height: 3rem;
       }
 
       .sidebar-user__avatar-wrapper {
-        height: $avatar-size/2;
-        width: $avatar-size/2;
+        height: math.div($avatar-size, 2);
+        width: math.div($avatar-size, 2);
       }
 
       .sidebar-user__name,

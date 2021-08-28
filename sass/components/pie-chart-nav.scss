@@ -1,0 +1,151 @@
+@import "pie-chart.scss";
+
+.pie-char-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  transform: translateY(-25%);
+
+  @at-root .pie-char-nav__name {
+    width: calc(100% / 3);
+    line-height: 1.1;
+    font-size: $font-size-sm;
+    color: $dark-secondary;
+    cursor: pointer;
+    transition: color $transition-duration-short;
+    padding: 0.5rem;
+    margin-bottom: -0.5rem;
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+}
+
+.pie-chart-nav__radio {
+  display: none;
+
+  &:checked {
+    &.pie-chart-nav--europe ~ .dashboard__pie-charts-wrapper .pie-chart {
+      &:nth-of-type(1) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.75, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "75%";
+        }
+      }
+
+      &:nth-of-type(2) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.15, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "15%";
+        }
+      }
+    }
+
+    &.pie-chart-nav--asia ~ .dashboard__pie-charts-wrapper .pie-chart {
+      &:nth-of-type(1) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.64, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "64%";
+        }
+      }
+
+      &:nth-of-type(2) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.89, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "89%";
+        }
+      }
+    }
+
+    &.pie-chart-nav--north-america ~ .dashboard__pie-charts-wrapper .pie-chart {
+      &:nth-of-type(1) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.35, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "35%";
+        }
+      }
+
+      &:nth-of-type(2) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.53, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "53%";
+        }
+      }
+    }
+
+    &.pie-chart-nav--south-america ~ .dashboard__pie-charts-wrapper .pie-chart {
+      &:nth-of-type(1) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.97, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "97%";
+        }
+      }
+
+      &:nth-of-type(2) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.24, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "24%";
+        }
+      }
+    }
+
+    &.pie-chart-nav--oceania ~ .dashboard__pie-charts-wrapper .pie-chart {
+      &:nth-of-type(1) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.28, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "28%";
+        }
+      }
+
+      &:nth-of-type(2) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.05, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "05%";
+        }
+      }
+    }
+
+    &.pie-chart-nav--africa ~ .dashboard__pie-charts-wrapper .pie-chart {
+      &:nth-of-type(1) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.15, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "15%";
+        }
+      }
+
+      &:nth-of-type(2) {
+        .pie-chart__inner-circle {
+          stroke-dasharray: $chart-circumference * 0.58, $chart-circumference;
+        }
+        .pie-chart__info::after {
+          content: "58%";
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $chart-size: 10rem;
 $chart-border-size: 0.75rem;
 
@@ -54,7 +56,7 @@ $chart-border-size: 0.75rem;
     left: 0;
     top: 0;
     border-radius: 50%;
-    border: $chart-size/2 solid;
+    border: math.div($chart-size, 2) solid;
     border-color: $chart-color transparent transparent;
     transform: rotate(-45deg);
 
@@ -82,7 +84,7 @@ $chart-border-size: 0.75rem;
     left: 0;
     top: 0;
     border-radius: 50%;
-    border: $chart-size/2 solid;
+    border: math.div($chart-size, 2) solid;
     border-color: transparent $grey-100 transparent transparent;
     transform: rotate(-135deg);
     z-index: 2;

@@ -114,3 +114,12 @@
     }
   }
 }
+
+.dashboard__pie-charts-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  @at-root .pie-chart {
+    width: 50%;
+  }
+}

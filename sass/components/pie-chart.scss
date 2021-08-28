@@ -1,0 +1,69 @@
+//$chart-circumference: 502.6548245744;
+@use "sass:math";
+
+$chart-size: 10rem;
+$chart-circumference: math.$pi * $chart-size;
+
+.pie-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+
+  @at-root .pie-chart__wrapper {
+    position: relative;
+
+    @at-root .pie-chart__background {
+      width: $chart-size;
+      height: $chart-size;
+      background: $grey-50;
+      box-shadow: $shadow-primary;
+      border-radius: 50%;
+
+      @at-root .pie-chart__inner-circle {
+        fill: $light;
+        opacity: 0.8;
+        stroke-width: 100%;
+        stroke: $primary;
+        stroke-dasharray: 0, $chart-circumference;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        @include cubic-bezier-transition(stroke-dasharray);
+      }
+    }
+  }
+
+  &.pie-chart-secondary {
+    .pie-chart__inner-circle {
+      stroke: $secondary;
+    }
+  }
+
+  @at-root .pie-chart__info {
+    background: $light;
+    box-shadow: $shadow-20;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    &::after {
+      content: "0%";
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $font-size-lg;
+      color: $dark-secondary;
+    }
+  }
+
+  @at-root .pie-chart__title {
+    margin-top: 1rem;
+    color: $dark-disabled;
+  }
+}

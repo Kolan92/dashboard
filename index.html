@@ -613,7 +613,79 @@
 
             <div class="col-12 col-xl-6">
               <div class="dashboard__section">
-                Sekcja 2
+                <div class="dashboard__heading">
+                  <h3>Sales Efficiency</h3>
+                </div>
+
+                <div class="pie-char-nav">
+                  <label for="chart-europe"
+                         class="pie-char-nav__name">Europe</label>
+                  <label for="chart-asia"
+                         class="pie-char-nav__name">Asia</label>
+                  <label for="chart-north-america"
+                         class="pie-char-nav__name">North America</label>
+                  <label for="chart-south-america"
+                         class="pie-char-nav__name">South America</label>
+                  <label for="chart-oceania"
+                         class="pie-char-nav__name">Oceania</label>
+                  <label for="chart-africa"
+                         class="pie-char-nav__name">Africa</label>
+
+                </div>
+
+                <input id="chart-europe"
+                       type="radio"
+                       name="chart-territory"
+                       class="pie-chart-nav__radio pie-chart-nav--europe">
+                <input id="chart-asia"
+                       type="radio"
+                       name="chart-territory"
+                       class="pie-chart-nav__radio pie-chart-nav--asia">
+                <input id="chart-north-america"
+                       type="radio"
+                       name="chart-territory"
+                       class="pie-chart-nav__radio pie-chart-nav--north-america">
+                <input id="chart-south-america"
+                       type="radio"
+                       name="chart-territory"
+                       class="pie-chart-nav__radio pie-chart-nav--south-america">
+                <input id="chart-oceania"
+                       type="radio"
+                       name="chart-territory"
+                       class="pie-chart-nav__radio pie-chart-nav--oceania">
+                <input id="chart-africa"
+                       type="radio"
+                       name="chart-territory"
+                       class="pie-chart-nav__radio pie-chart-nav--africa">
+
+
+                <div class="dashboard__pie-charts-wrapper">
+                  <div class="pie-chart">
+                    <div class="pie-chart__wrapper">
+                      <svg class="pie-chart__background">
+                        <circle class="pie-chart__inner-circle"
+                                r="80"
+                                cx="80"
+                                cy="80"></circle>
+                      </svg>
+                      <div class="pie-chart__info"></div>
+                    </div>
+                    <h4 class="pie-chart__title">CRM solutions</h4>
+                  </div>
+
+                  <div class="pie-chart pie-chart-secondary">
+                    <div class="pie-chart__wrapper">
+                      <svg class="pie-chart__background">
+                        <circle class="pie-chart__inner-circle"
+                                r="80"
+                                cx="80"
+                                cy="80"></circle>
+                      </svg>
+                      <div class="pie-chart__info"></div>
+                    </div>
+                    <h4 class="pie-chart__title">Mobile Aps</h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
