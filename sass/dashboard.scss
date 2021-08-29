@@ -84,17 +84,18 @@
 
     @at-root .dashboard__calendar-checkbox {
       display: none;
+
       &:checked + .calendar {
-        display: block;
+        animation: zoomIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       }
     }
 
     @at-root .calendar {
-      display: none;
       position: absolute;
       left: 0;
       top: 3rem;
       z-index: 100;
+      animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
 
     @at-root .dashboard__more-charts {
@@ -121,5 +122,27 @@
 
   @at-root .pie-chart {
     width: 50%;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
 }

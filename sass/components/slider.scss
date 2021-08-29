@@ -1,0 +1,150 @@
+$candidates-number: 6;
+$visible-candidates: 4;
+$card-width: calc(100% / #{$visible-candidates});
+
+.slider {
+  @at-root .slider_mask {
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 2rem;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &::before {
+      left: 0;
+      background-image: linear-gradient(to right, $grey-50, transparent 50%);
+    }
+
+    &::after {
+      right: 0;
+      background-image: linear-gradient(to right, transparent, $grey-50 50%);
+    }
+
+    @at-root .slider__wrapper {
+      display: flex;
+      flex-direction: row;
+      width: calc(#{$card-width} * #{$candidates-number});
+      animation: slideLeftRight 15s linear infinite alternate-reverse;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+.slider__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: calc(100% / #{$candidates-number} - 2rem);
+  background: $light;
+  box-shadow: $shadow-10;
+  margin: 0 1rem;
+
+  @at-root .slider__icons-wrapper {
+    display: flex;
+    @at-root .slider__icon_wrapper {
+      width: calc(100% / 3);
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      padding: 1rem 0;
+      font-size: $font-size-sm;
+      color: $dark-secondary;
+      transition: color $transition-duration-short;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+
+    @at-root .slider__star-checkbox {
+      display: none;
+
+      &:checked + .slider__star-icon {
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: inline;
+        }
+      }
+    }
+
+    @at-root .slider__star-icon {
+      cursor: pointer;
+      &::before,
+      &::after {
+        height: 100%;
+        width: 100%;
+        font-family: "Material Icons";
+        font-size: $font-size-xl;
+        transition: color $transition-duration-short;
+      }
+
+      &::before {
+        content: "star_border";
+        display: inline;
+      }
+
+      &::after {
+        content: "star";
+        display: none;
+        color: $secondary;
+      }
+
+      &:hover,
+      &:focus {
+        color: $secondary;
+      }
+    }
+  }
+
+  @at-root .slider__info-wrapper {
+    padding: 1rem;
+    margin: 0.5rem 0;
+
+    @at-root .slider__wrapper-avatar {
+      border-radius: 50%;
+      max-width: 100%;
+      box-shadow: $shadow-20;
+    }
+  }
+
+  @at-root .slider__name {
+    margin-top: 1.5rem;
+    color: $dark-secondary;
+  }
+
+  @at-root .slider__position {
+    font-size: $font-size-lg;
+    margin-top: 0.5rem;
+    display: block;
+  }
+}
+
+@keyframes slideLeftRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    $returnPoint: calc(
+      -100% / #{$candidates-number} *
+        (#{$candidates-number} - #{$visible-candidates})
+    );
+    @debug $returnPoint;
+    transform: translateX($returnPoint);
+  }
+}
