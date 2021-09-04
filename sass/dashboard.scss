@@ -146,3 +146,75 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 48rem) {
+  .dashboard {
+    margin: 0;
+  }
+}
+
+@media (max-width: 62rem) {
+  @at-root .dashboard__chart-nav {
+    flex-wrap: wrap;
+    @at-root .dashboard__chart-link.dashboard__chart-link--main {
+      width: 100%;
+      padding: 0.5rem;
+      justify-content: center;
+      margin: 0;
+    }
+
+    @at-root .dashboard__calendar-toggler {
+      width: 100%;
+      padding: 0.5rem;
+      justify-content: center;
+      margin: 0;
+      height: auto;
+    }
+
+    @at-root .dashboard__date-range {
+      padding: 1rem;
+      line-height: 1.1;
+    }
+
+    @at-root .calendar {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  @at-root .dashboard__charts-wrapper {
+    flex-direction: column;
+    @at-root .dashboard__chart-wrapper {
+      width: 100%;
+
+      &:nth-of-type(1) {
+        padding-right: 0;
+      }
+
+      &:nth-of-type(2) {
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  @at-root .calendar {
+    right: 50%;
+    transform: translateX(50%) !important;
+  }
+}
+
+@media (max-width: 30rem) {
+  @at-root .calendar {
+    overflow-y: auto;
+  }
+
+  @at-root .dashboard__pie-charts-wrapper {
+    flex-wrap: wrap;
+    @at-root .pie-chart {
+      width: 100%;
+    }
+  }
+}

@@ -34,7 +34,7 @@
         <i class="sidebar-toggler__icon"></i>
       </label>
 
-      <section class="sidebar__section">
+      <section class="sidebar__section sidebar__section--logo">
         <div class="sidebar-logo">
           <a href="#"
              class="sidebar-logo__wrapper">
@@ -44,7 +44,7 @@
         </div>
       </section>
 
-      <section class="sidebar__section">
+      <section class="sidebar__section sidebar__section--user">
         <div class="sidebar-user">
           <div class="sidebar-user__avatar-wrapper">
             <img class="sidebar-user__avatar"
@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <section class="sidebar__section">
+      <section class="sidebar__section sidebar__section--nav">
         <div class="sidebar-nav">
           <h4 class="sidebar-nav__header"
               data-toggled-shortcut="Nav">
@@ -114,7 +114,7 @@
         </div>
       </section>
 
-      <section class="sidebar__section">
+      <section class="sidebar__section sidebar__section--nav">
         <div class="sidebar-nav">
           <h4 class="sidebar-nav__header"
               data-toggled-shortcut="COM">
@@ -167,7 +167,7 @@
           </ul>
         </div>
       </section>
-      <section class="sidebar__section">
+      <section class="sidebar__section sidebar__section--nav">
         <div class="sidebar-nav">
           <h4 class="sidebar-nav__header"
               data-toggled-shortcut="Set">
@@ -282,7 +282,7 @@
               </ul>
             </div>
           </div>
-          <div class="navbar__section">
+          <div class="navbar__section navbar__section--navbar-user">
             <div class="sidebar-user sidebar-user--slim">
               <div class="sidebar-user__avatar-wrapper">
                 <img class="sidebar-user__avatar"
@@ -370,18 +370,27 @@
                   </thead>
                   <tbody class="table__tbody">
                     <tr class="table__tr">
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="Actions">
                         <button class="material-icons table__action-icon">edit</button>
                         <button class="material-icons table__action-icon">delete</button>
                       </td>
-                      <td class="table__td">12118</td>
-                      <td class="table__td">Aaron</td>
-                      <td class="table__td">Sullivan</td>
-                      <td class="table__td">a.sullivan@ex.com</td>
-                      <td class="table__td">13/08/2018</td>
-                      <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span>
+                      <td class="table__td"
+                          data-title="ID">12118</td>
+                      <td class="table__td"
+                          data-title="First name">Aaron</td>
+                      <td class="table__td"
+                          data-title="Last name">Sullivan</td>
+                      <td class="table__td"
+                          data-title="Email">a.sullivan@ex.com</td>
+                      <td class="table__td"
+                          data-title="Created">13/08/2018</td>
+                      <td class="table__td"
+                          data-title="OnBoarding"><span
+                              class="table__onboarding table__onboarding--pending">Pending</span>
                       </td>
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="More Actions">
                         <input class="table__toggler"
                                id="more-actions-1"
                                type="checkbox" />
@@ -398,18 +407,27 @@
                       </td>
                     </tr>
                     <tr class="table__tr">
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="Actions">
                         <button class="material-icons table__action-icon">edit</button>
                         <button class="material-icons table__action-icon">delete</button>
                       </td>
-                      <td class="table__td">12048</td>
-                      <td class="table__td">Arianna</td>
-                      <td class="table__td">Stewart</td>
-                      <td class="table__td">a.stewart@ex.com</td>
-                      <td class="table__td">12/06/2018</td>
-                      <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span>
+                      <td class="table__td"
+                          data-title="ID">12048</td>
+                      <td class="table__td"
+                          data-title="First name">Arianna</td>
+                      <td class="table__td"
+                          data-title="Last name">Stewart</td>
+                      <td class="table__td"
+                          data-title="Email">a.stewart@ex.com</td>
+                      <td class="table__td"
+                          data-title="Created">12/06/2018</td>
+                      <td class="table__td"
+                          data-title="OnBoarding"><span
+                              class="table__onboarding table__onboarding--pending">Pending</span>
                       </td>
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="More Actions">
                         <input class="table__toggler"
                                id="more-actions-2"
                                type="checkbox" />
@@ -426,18 +444,26 @@
                       </td>
                     </tr>
                     <tr class="table__tr">
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="Actions">
                         <button class="material-icons table__action-icon">edit</button>
                         <button class="material-icons table__action-icon">delete</button>
                       </td>
-                      <td class="table__td">22312</td>
-                      <td class="table__td">Marlene</td>
-                      <td class="table__td">Johnson</td>
-                      <td class="table__td">m.johnson@ex.com</td>
-                      <td class="table__td">12/07/2018</td>
-                      <td class="table__td"><span
+                      <td class="table__td"
+                          data-title="ID">22312</td>
+                      <td class="table__td"
+                          data-title="First name">Marlene</td>
+                      <td class="table__td"
+                          data-title="Last name">Johnson</td>
+                      <td class="table__td"
+                          data-title="Email">m.johnson@ex.com</td>
+                      <td class="table__td"
+                          data-title="Created">12/07/2018</td>
+                      <td class="table__td"
+                          data-title="OnBoarding"><span
                               class="table__onboarding table__onboarding--completed">Completed</span></td>
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="More Actions">
                         <input class="table__toggler"
                                id="more-actions-3"
                                type="checkbox" />
@@ -454,18 +480,26 @@
                       </td>
                     </tr>
                     <tr class="table__tr">
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="Actions">
                         <button class="material-icons table__action-icon">edit</button>
                         <button class="material-icons table__action-icon">delete</button>
                       </td>
-                      <td class="table__td">22312</td>
-                      <td class="table__td">Marlene</td>
-                      <td class="table__td">Johnson</td>
-                      <td class="table__td">m.johnson@ex.com</td>
-                      <td class="table__td">12/07/2018</td>
-                      <td class="table__td"><span
+                      <td class="table__td"
+                          data-title="ID">22312</td>
+                      <td class="table__td"
+                          data-title="First name">Marlene</td>
+                      <td class="table__td"
+                          data-title="Last name">Johnson</td>
+                      <td class="table__td"
+                          data-title="Email">m.johnson@ex.com</td>
+                      <td class="table__td"
+                          data-title="Created">12/07/2018</td>
+                      <td class="table__td"
+                          data-title="OnBoarding"><span
                               class="table__onboarding table__onboarding--completed">Completed</span></td>
-                      <td class="table__td">
+                      <td class="table__td"
+                          data-title="More Actions">
                         <input class="table__toggler"
                                id="more-actions-4"
                                type="checkbox" />
@@ -636,7 +670,8 @@
                 <input id="chart-europe"
                        type="radio"
                        name="chart-territory"
-                       class="pie-chart-nav__radio pie-chart-nav--europe">
+                       class="pie-chart-nav__radio pie-chart-nav--europe"
+                       checked>
                 <input id="chart-asia"
                        type="radio"
                        name="chart-territory"

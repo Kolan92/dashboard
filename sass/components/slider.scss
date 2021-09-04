@@ -1,5 +1,8 @@
 $candidates-number: 6;
 $visible-candidates: 4;
+$visible-candidates-xl: 3;
+$visible-candidates-lg: 2;
+$visible-candidates-sm: 1;
 $card-width: calc(100% / #{$visible-candidates});
 
 .slider {
@@ -144,7 +147,31 @@ $card-width: calc(100% / #{$visible-candidates});
       -100% / #{$candidates-number} *
         (#{$candidates-number} - #{$visible-candidates})
     );
-    @debug $returnPoint;
     transform: translateX($returnPoint);
+  }
+}
+
+@media (max-width: 75rem) {
+  $card-width: calc(100% / #{$visible-candidates-xl});
+  @at-root .slider__wrapper {
+    width: calc(#{$card-width} * #{$candidates-number});
+  }
+}
+
+@media (max-width: 62rem) {
+  $card-width: calc(100% / #{$visible-candidates-lg});
+  @at-root .slider__wrapper {
+    width: calc(#{$card-width} * #{$candidates-number});
+  }
+}
+
+@media (max-width: 30rem) {
+  $card-width: calc(100% / #{$visible-candidates-sm});
+  @at-root .slider__wrapper {
+    width: calc(#{$card-width} * #{$candidates-number});
+  }
+
+  @at-root .slider__info-wrapper {
+    padding: 0 1rem;
   }
 }

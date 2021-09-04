@@ -122,3 +122,14 @@ button {
     z-index: 1;
   }
 }
+
+@media (max-width: 48rem) {
+  .app {
+    flex-direction: column;
+
+    @at-root .app__page {
+      width: 100%;
+      padding-top: 3rem;
+    }
+  }
+}
